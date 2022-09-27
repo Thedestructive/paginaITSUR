@@ -10,3 +10,11 @@
   width: 1px;
   background-color: rgba(227,179,35,1);
 }
+.nav-space{
+  width: 20%;
+  height: 100vh;
+}
+.section-space{
+  display: flex;
+  width: 100%;
+}
