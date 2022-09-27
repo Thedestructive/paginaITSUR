@@ -1,9 +1,28 @@
-.nav-menu{
-    width: 20%;
-    height: 100vh;
+.nav-menu {
+    width: 100%;
+    height: 100%;
     background: rgba(189, 189, 189, 0.36);
-    box-shadow: 0 0 8px 0 rgba(227,179,35,1);
+    box-shadow: 0 0 8px 0 rgba(227, 179, 35, 1);
     backdrop-filter: blur(5.15px);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.nav-menu>ul {
+    padding: 0;
+    margin: 0;
+
+}
+
+.li-list {
+    list-style: none;
+    background: rgba(189, 189, 189, 0.36);
+    padding: 10px;
+}
+.li-list > a {
+    background: rgba(189, 189, 189, 0.01);
+    text-decoration: none;
+    font-size: 1.2em;
+    color: yellow;
+    
 }
