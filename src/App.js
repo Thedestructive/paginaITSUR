@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { News } from './components/news/News';
 import { Menu } from './components/Menu/Menu';
