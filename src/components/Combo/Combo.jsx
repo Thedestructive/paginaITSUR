@@ -1,5 +1,6 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import { PlanEstudiElectronica, PlanEstudioAmbiental, PlanEstudioAutomotriz, PlanEstudioGastro, PlanEstudioGestion, PlanEstudioIndustrial, PlanEstudioSistemas } from '../PlanEstudio/PlanEstudio'
+import './Combo.css'
 
 export const ComboEstudios = () => {
     const [carrera, setCarrera] = useState({
@@ -37,17 +38,19 @@ export const ComboEstudios = () => {
         }
     }
     return (
-        <div>
-            <select onChange={selectCarrera}>
-                <option>--Elije una Carrera--</option>
-                <option>Electronica</option>
+        <div class='contenedor'>
+            <div class='tenedor'>
+            <select onChange={selectCarrera} class='box'>
+                <option disabled='disabled' selected='selected'>--Elije una Carrera--</option>
                 <option>Ambiental</option>
                 <option>Automotriz</option>
+                <option>Electronica</option>
                 <option>Gastronomía</option>
                 <option>Gestión</option>
                 <option>Industrial</option>
                 <option>Sistemas</option>
             </select>
+            </div>
             {
                 (carrera.carrera === 'Electronica' && carrera.bool) &&
                 <PlanEstudiElectronica />

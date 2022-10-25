@@ -22,13 +22,13 @@ export const PlanEstudioSistemas = () => {
 
 export const PlanEstudioGastro = () => {
     const fila1 = ['Microbiología de alimentos', 'Higiene en el manejo de alimentos y bebidas', 'Química y conservación de los alimentos', 'Tecnología de frutas, hortalizas y confitería', 'Gestión Estratégica', 'Taller de investigación I', 'Taller de investigación II', 'Formulación y evaluación de proyectos', 'Residencia profesional'];
-    const fila2 = ['Fundamentos de Turismo', 'Cultura y patrimonio gastronómico', 'Costo y manejo de almacenes', 'Coctelería', 'Enología y vitivinicultura', 'Nutrición y dietética', 'Cocina internacional II', 'Estancia técnica internacional'];
-    const fila3 = ['Introducción a la gastronomía', 'Bases culinarias', 'Cocina mexicana', 'Panadería', 'Introducción a la repostería', 'Cocina internacional I', 'Cocina sudamericana I', 'Cocina sudamericana II'];
-    const fila4 = ['Fundamentos de investigación', 'Física en gastronomía', 'Probabilidad y estadística', 'Economía empresarial', 'Investigacion de operaciones', 'Mercadotecnia', 'Cocina oriental', 'Cocina mediterranea'];
-    const fila5 = ['Matemáticas para gastronomía', 'Fundamentos de gestión empresarial', 'Gestión de capital humano', 'Finanzas de las organizaciones', 'Calidad aplicada a la gestión empresarial', 'Banquetes', 'Estancia técnica nacional', 'Cocina experimental'];
-    const fila6 = ['Software de aplicación ejecutivo', 'Taller de ética', 'Protocolo de Seguridad', 'Desarrollo sustentable', 'Marco legal de las organizaciones', ' ', 'Dirección de establecimientos de alimentos y bebidas', 'Cocina vegetariana'];
-    const fila7 = [' ', ' ', ' ', ' ', ' ', 'El emprendedor y la innovación', 'Escultura en hielo y mukimono', ' '];
-    const fila8 = [' ', ' ', ' ', ' ', ' ', 'Técnica de cocina caliente', ' ', ' '];
+    const fila2 = ['Fundamentos de Turismo', 'Cultura y patrimonio gastronómico', 'Costo y manejo de almacenes', 'Coctelería', 'Enología y vitivinicultura', 'Nutrición y dietética', 'Cocina internacional II', 'Estancia técnica internacional', ' '];
+    const fila3 = ['Introducción a la gastronomía', 'Bases culinarias', 'Cocina mexicana', 'Panadería', 'Introducción a la repostería', 'Cocina internacional I', 'Cocina sudamericana I', 'Cocina sudamericana II', ' '];
+    const fila4 = ['Fundamentos de investigación', 'Física en gastronomía', 'Probabilidad y estadística', 'Economía empresarial', 'Investigacion de operaciones', 'Mercadotecnia', 'Cocina oriental', 'Cocina mediterranea', ' '];
+    const fila5 = ['Matemáticas para gastronomía', 'Fundamentos de gestión empresarial', 'Gestión de capital humano', 'Finanzas de las organizaciones', 'Calidad aplicada a la gestión empresarial', 'Banquetes', 'Estancia técnica nacional', 'Cocina experimental', ' '];
+    const fila6 = ['Software de aplicación ejecutivo', 'Taller de ética', 'Protocolo de Seguridad', 'Desarrollo sustentable', 'Marco legal de las organizaciones', ' ', 'Dirección de establecimientos de alimentos y bebidas', 'Cocina vegetariana', ' '];
+    const fila7 = [' ', ' ', ' ', ' ', ' ', 'El emprendedor y la innovación', 'Escultura en hielo y mukimono', ' ', ' '];
+    const fila8 = [' ', ' ', ' ', ' ', ' ', 'Técnica de cocina caliente', ' ', ' ', ' '];
     return (
         <section>
             <center><h1>Gastronomía</h1></center>
@@ -43,7 +43,7 @@ export const PlanEstudioAutomotriz = () => {
     const fila3 = ['Fundamentos de investigación', 'Programación aplicada', 'Métodos numéricos', 'Dinámica', 'Análisis y síntesis de mecanismos', 'Instrumentación', 'Electrónica de potencia', ' ', 'Especialidad'];
     const fila4 = ['Programación básica', ' ', 'Electricidad y magnetismo', 'Análisis de circuitos eléctricos', 'Electrónica analógica', 'Electrónica digital', 'Control', 'Elementos automotrices', 'Residencia profesional'];
     const fila5 = ['Fundamentos de dibujo', 'Tecnología y comportamiento de los materiales', 'Termodinámica', 'Mecánica de fluidos', 'Transferencia de calor', 'Motores de combustión interna', 'Gestión de la calidad automotriz', ' ', 'Servicio social'];
-    const fila6 = ['Química aplicada a sistemas automotrices', 'Metrología y normalización', 'Procesos de manufactura de elementos automotrices', 'Habilidades directivas', 'Control estadístico de procesos automotrices', 'Administración de sistemas automotrices', 'Ingeniería de costos automotrices', 'Actividades Complementarias'];
+    const fila6 = ['Química aplicada a sistemas automotrices', 'Metrología y normalización', 'Procesos de manufactura de elementos automotrices', 'Habilidades directivas', 'Control estadístico de procesos automotrices', 'Administración de sistemas automotrices', 'Ingeniería de costos automotrices', 'Actividades Complementarias', ' '];
     return (
         <section>
             <center><h1>Ingeniería en Sistemas Automotrices</h1></center>
