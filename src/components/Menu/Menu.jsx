@@ -5,7 +5,7 @@ export const Menu = () => {
     const itemMenu = [
         {
             title: 'Plan de estudio',
-            link: '/PlanEstudio',
+            link: '/ComboEstudios',
             index: 0
         },
         {

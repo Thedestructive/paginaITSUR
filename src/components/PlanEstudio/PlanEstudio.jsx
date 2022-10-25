@@ -13,7 +13,7 @@ export const PlanEstudioSistemas = () => {
     const fila8 = ['Extracurriculares I (Actividad Complementaria III)', 'Extracurriculares II (Actividad Complementaria IV)', 'Ingles I', 'Ingles II', 'Ingles III', 'Ingles IV', 'Ingles V', 'Form. y Eval. de Proy. de Inv.', ' '];
     return (
         <section>
-            <center><h1>INGENIERIA EN SISTEMAS COMPUTACIONALES ISIC-2010-224 “PROGRAMACIÓN DE APLICACIONES WEB Y MÓVILES”</h1></center>
+            <center><h1>Ingeniería en sistemas computacionales con especialidad en programación de aplicaciones web y móviles</h1></center>
             <Tablas fila1={fila1} fila2={fila2} fila3={fila3} fila4={fila4} fila5={fila5} fila6={fila6} fila7={fila7} fila8={fila8} fila9 />
         </section>
     )
@@ -88,7 +88,7 @@ export const PlanEstudioIndustrial = () => {
 }
 
 export const PlanEstudiElectronica = () => {
-    const fila1 = ['Precálculo', 'cálculo diferencial', 'cálculo integral', 'cálculo vectorial', 'Análisis numérico', 'Circuitos eléctricos II', 'Amplificadores operacionales', 'Instrumentación', 'Introducción a las telecomunicaciones'];
+    const fila1 = ['Precálculo', 'Cálculo diferencial', 'Cálculo integral', 'Cálculo vectorial', 'Análisis numérico', 'Circuitos eléctricos II', 'Amplificadores operacionales', 'Instrumentación', 'Introducción a las telecomunicaciones'];
     const fila2 = ['Comprensión lectora', 'Tópicos selectos de física', 'Algebra lineal', 'Ecuaciones diferenciales', 'Circuitos eléctricos I', 'Diodos y transmisores', 'Diseño con transistores', 'Optoelectrónica', 'Electrónica de potencia'];
     const fila3 = ['Mecánica clásica', 'Mediciones eléctricas', 'Electromagnetismo', 'Física de semiconductores', 'Teoría electromagnética', 'Máquinas eléctricas', 'Contol II', 'Control digital', 'Señales analógicas en dispositivos programables'];
     const fila4 = ['Lógica matemática', 'Química', 'Diseño digital', 'Diseño digital con VHDL', 'Microcontroladores', 'Control I', 'Transmisión de datos en la industria', 'Tecnologías de automatización', 'Integración de sistemas automatizados'];
