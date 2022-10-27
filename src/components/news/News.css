@@ -80,3 +80,22 @@ article > img {
 .close-popup:hover{
     cursor: pointer;
 }
+
+.papaPopUp{
+    margin: auto;
+    height: 80%;
+    width: 100%;
+}
+
+.imagenPopUp{
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+}
+
+.textoPopUp{
+    margin-top: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    color: white;
+}
