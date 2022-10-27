@@ -12,7 +12,7 @@ export const PlanEstudioSistemas = () => {
     const fila7 = ['Tutoría I (Actividad Complementaria I)', 'Tutoria II (Actividad Complementaria II)', 'Servicio Social II 70% Créditos (7mo y 8vo)', ' ', ' ', 'Sistemas Programables', 'Programación Móvil I', 'Programación Móvil II', ' '];
     const fila8 = ['Extracurriculares I (Actividad Complementaria III)', 'Extracurriculares II (Actividad Complementaria IV)', 'Ingles I', 'Ingles II', 'Ingles III', 'Ingles IV', 'Ingles V', 'Form. y Eval. de Proy. de Inv.', ' '];
     return (
-        <section>
+        <section className='seccion-plan-estudio'>
             <center><h1>Ingeniería en sistemas computacionales con especialidad en programación de aplicaciones web y móviles</h1></center>
             <Tablas fila1={fila1} fila2={fila2} fila3={fila3} fila4={fila4} fila5={fila5} fila6={fila6} fila7={fila7} fila8={fila8} fila9 />
         </section>
@@ -30,7 +30,7 @@ export const PlanEstudioGastro = () => {
     const fila7 = [' ', ' ', ' ', ' ', ' ', 'El emprendedor y la innovación', 'Escultura en hielo y mukimono', ' ', ' '];
     const fila8 = [' ', ' ', ' ', ' ', ' ', 'Técnica de cocina caliente', ' ', ' ', ' '];
     return (
-        <section>
+        <section className='seccion-plan-estudio'>
             <center><h1>Gastronomía</h1></center>
             <Tablas fila1={fila1} fila2={fila2} fila3={fila3} fila4={fila4} fila5={fila5} fila6={fila6} fila7={fila7} fila8={fila8} fila9 />
         </section>
@@ -45,7 +45,7 @@ export const PlanEstudioAutomotriz = () => {
     const fila5 = ['Fundamentos de dibujo', 'Tecnología y comportamiento de los materiales', 'Termodinámica', 'Mecánica de fluidos', 'Transferencia de calor', 'Motores de combustión interna', 'Gestión de la calidad automotriz', ' ', 'Servicio social'];
     const fila6 = ['Química aplicada a sistemas automotrices', 'Metrología y normalización', 'Procesos de manufactura de elementos automotrices', 'Habilidades directivas', 'Control estadístico de procesos automotrices', 'Administración de sistemas automotrices', 'Ingeniería de costos automotrices', 'Actividades Complementarias', ' '];
     return (
-        <section>
+        <section className='seccion-plan-estudio'>
             <center><h1>Ingeniería en Sistemas Automotrices</h1></center>
             <Tablas fila1={fila1} fila2={fila2} fila3={fila3} fila4={fila4} fila5={fila5} fila6={fila6} fila7 fila8 fila9 />
         </section>
@@ -62,7 +62,7 @@ export const PlanEstudioAmbiental = () => {
     const fila7 = ['Actividades complementarias I', 'Actividades complementarias II', 'Servicio social I', ' ', ' ', ' ', ' ', 'Servicio social II', ' '];
     const fila8 = ['Actividades Complementarias III', 'Actividaes Complementarias IV', 'Ingles I', 'Ingles II', 'Ingles III', 'Ingles IV', 'Ingles V', 'Actividades Complementarias V', ' '];
     return (
-        <section>
+        <section className='seccion-plan-estudio'>
             <center><h1>Ingeniería Ambiental</h1></center>
             <Tablas fila1={fila1} fila2={fila2} fila3={fila3} fila4={fila4} fila5={fila5} fila6={fila6} fila7={fila7} fila8={fila8} fila9 />
         </section>
@@ -80,7 +80,7 @@ export const PlanEstudioIndustrial = () => {
     const fila8 = ['Extracurriculares I', 'Extracurriculares II', 'Ingles I', 'Ingles II', 'Ingles III', 'Ingles IV', 'Ingles V', 'TOEFL', ' '];
     const fila9 = ['Tutorías I', 'Tutorías II', ' ', ' ', ' ', ' ', 'Servicio social', ' ', ' '];
     return (
-        <section>
+        <section className='seccion-plan-estudio'>
             <center><h1>Ingeniería Industrial con especialidad en Calidad y Productividad</h1></center>
             <Tablas fila1={fila1} fila2={fila2} fila3={fila3} fila4={fila4} fila5={fila5} fila6={fila6} fila7={fila7} fila8={fila8} fila9={fila9} />
         </section>
@@ -98,7 +98,7 @@ export const PlanEstudiElectronica = () => {
     const fila8 = ['Actividad complementaria I', 'Actividad complementaria II', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
     const fila9 = ['Semestre 10: Residencia profesional', 'Actividad complementaria III', 'Actividad complementaria IV', 'Ingles I', 'Ingles II', 'Ingles III', 'Ingles IV', 'Ingles V', 'Servicio social'];
     return (
-        <section>
+        <section className='seccion-plan-estudio'>
             <center><h1>Ingeniería electrónica con especialidad en automatización de empresas</h1></center>
             <Tablas fila1={fila1} fila2={fila2} fila3={fila3} fila4={fila4} fila5={fila5} fila6={fila6} fila7={fila7} fila8={fila8} fila9={fila9} />
         </section>
@@ -116,7 +116,7 @@ export const PlanEstudioGestion = () => {
     const fila8 = ['Actividades extracurriculares', 'Actividades extracurriculares', ' ', ' ', ' ', ' ', 'Ingles V', 'Actividad complementaria V', ' '];
 
     return (
-        <section>
+        <section className='seccion-plan-estudio'>
             <center><h1>Ingeniería en gestión empresarial con especialidad en Calidad y Logística</h1></center>
             <Tablas fila1={fila1} fila2={fila2} fila3={fila3} fila4={fila4} fila5={fila5} fila6={fila6} fila7={fila7} fila8={fila8} fila9 />
         </section>

@@ -11,9 +11,7 @@ function App() {
     <div className='app'>
 
       <BrowserRouter>
-        <nav className='nav-space'>
-          <Menu />
-        </nav>
+        <Menu />
         <section className='section-space'>
           <Routes>
             <Route path='/' element={<News />} />
