@@ -29,7 +29,6 @@ export const ComboEstudios = () => {
                 break;
             case 'Sistemas':
                 setCarrera({ ...carrera, carrera: e.target.value, bool: true });
-                console.log(carrera)
                 break;
             default:
                 setCarrera({ ...carrera, carrera: '', bool: false });
@@ -38,18 +37,18 @@ export const ComboEstudios = () => {
         }
     }
     return (
-        <div class='contenedor'>
-            <div class='tenedor'>
-            <select onChange={selectCarrera} class='box'>
-                <option disabled='disabled' selected='selected'>--Elije una Carrera--</option>
-                <option>Ambiental</option>
-                <option>Automotriz</option>
-                <option>Electronica</option>
-                <option>Gastronomía</option>
-                <option>Gestión</option>
-                <option>Industrial</option>
-                <option>Sistemas</option>
-            </select>
+        <div className='contenedor'>
+            <div className='tenedor'>
+                <select onChange={selectCarrera} className='box' defaultValue={'--Elije una Carrera--'}>
+                    <option disabled='disabled'>--Elije una Carrera--</option>
+                    <option>Ambiental</option>
+                    <option>Automotriz</option>
+                    <option>Electronica</option>
+                    <option>Gastronomía</option>
+                    <option>Gestión</option>
+                    <option>Industrial</option>
+                    <option>Sistemas</option>
+                </select>
             </div>
             {
                 (carrera.carrera === 'Electronica' && carrera.bool) &&
