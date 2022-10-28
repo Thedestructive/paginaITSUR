@@ -1,6 +1,7 @@
 .noticias{
     width: 100%;
 }
+
 .titulo{
     color: rgba(0,0,0);
     width: 100%;
@@ -8,16 +9,19 @@
     text-align: center;
     background: none;
     font-family: Arial, Helvetica, sans-serif;
-    margin-top: 25px;
     font-size: 3em;
-    margin-bottom: 50px;
+    top: 5%;
 }
 
+.textMuestraNoticia{
+    margin-top: 13%;
+}
 
 .contenedor-noticias{
     width: 90%;
     height: 100%;
     margin: auto;
+    margin-top: 15%;
     border-radius: 16px;
     display: flex;
     flex-wrap: wrap;

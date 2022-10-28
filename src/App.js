@@ -1,4 +1,5 @@
 import './App.css';
+import { Inicio } from './components/Inicio/Inicio'
 import { News } from './components/news/News';
 import { Menu } from './components/Menu/Menu';
 import { ComboEstudios } from './components/Combo/Combo';
@@ -13,7 +14,7 @@ function App() {
         <Menu />
         <section className='section-space'>
           <Routes>
-            <Route path='/' element={<News />} />
+            <Route path='/' element={ <Inicio/> } />
             <Route path='/Noticias' element={<News />} />
             <Route path='/ComboEstudios' element={<ComboEstudios />} />
           </Routes>
