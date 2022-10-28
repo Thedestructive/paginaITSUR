@@ -1,22 +1,21 @@
 import React, { createRef } from 'react'
-import imgHalcon from './alcohon.jpg'
-import imgLogo from './Logo.png'
+import imgLogo from './header_logo_letras.jpg'
 import imgFooter from './footer.png'
 import './Inicio.css'
 
 export const Inicio = () => {
-    
+
     return (
-        <section className = 'inicio'>
-            <img className = "imgLogo" src = {imgLogo} />
-            <img className = "imgHalcon" src = {imgHalcon}/>
-            <h1 className = 'tituloInicio'> BIENVENIDO A LA PAGINA DEL ITSUR </h1>
+        <div className='inicio'>
+            <div className='imgLogoDiv'>
+                <img className="imgLogo" />
+            </div>
+            <h1 className='tituloInicio'> BIENVENIDO A LA PAGINA DEL ITSUR </h1>
             <div>
-                
             </div>
             <footer>
-                <img className = "imgFooter" src = {imgFooter}/>
+                <img className="imgFooter"/>
             </footer>
-        </section>
+        </div>
     )
 }
