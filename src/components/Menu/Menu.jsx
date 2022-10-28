@@ -5,14 +5,19 @@ export const Menu = () => {
     let overlay = createRef();
     const itemMenu = [
         {
+            title: 'Inicio',
+            link: '/',
+            index: 0
+        },
+        {
             title: 'Plan de estudio',
             link: '/ComboEstudios',
-            index: 0
+            index: 1
         },
         {
             title: 'Noticias',
             link: '/Noticias',
-            index: 1
+            index: 2
         }
     ]
     const disableScroll = async () => {
