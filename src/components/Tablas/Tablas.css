@@ -3,20 +3,23 @@
     width: 90%;
     margin: auto;
     overflow-x: auto;
-    box-shadow: 2px 2px 20px 2px rgba(0, 0, 0, .75);
     border-radius: 16px;
-    box-shadow: 0 0.275rem 0.75rem -0.0625rem rgb(19 16 34 / 6%), 0 0.125rem 0.4rem -0.0625rem rgb(19 16 34 / 3%);
     border: 1px solid #e2e5f1;
     word-wrap: break-word;
+    margin-top: 25px;
 }
-
+.titulo-tabla{
+    font-size: 1.3em;
+    font-weight: 6000;
+    color: #1b396a;
+    background-color: #eaf0fb;
+    border-radius: 16px;
+}
 .fila-horario-header {
-    width: fit-content;
     color: #1b396a;
     text-align: center;
     font-size: 1.1em;
     font-style: normal;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .fila-horario {
@@ -29,8 +32,6 @@
     height: fit-content;
     background: rgb(255, 255, 255);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(5px);
     color: rgb(4, 4, 4);
     text-align: center;
 
@@ -39,10 +40,7 @@
 
 .columna-horario:hover {
     cursor: pointer;
-    box-shadow:
-        inset 0 -3em 3em rgba(0, 0, 0, 0.1),
-        0 0 0 2px rgb(255, 255, 255),
-        0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 0px 15px #1b396a;
     -webkit-transform: scale(1.05);
     -moz-transform: scale(1.05);
     -o-transform: scale(1.05);

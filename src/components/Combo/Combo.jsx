@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { PlanEstudiElectronica, PlanEstudioAmbiental, PlanEstudioAutomotriz, PlanEstudioGastro, PlanEstudioGestion, PlanEstudioIndustrial, PlanEstudioSistemas } from '../PlanEstudio/PlanEstudio'
 import './Combo.css'
-
+import { FaSearch } from 'react-icons/fa';
 export const ComboEstudios = () => {
     const [carrera, setCarrera] = useState({
         carrera: '',
@@ -38,8 +38,11 @@ export const ComboEstudios = () => {
     }
     return (
         <div className='contenedor'>
+            <p>BUSCA TU PLAN DE ESTUDIO EN ESTA SECCION</p>
             <div className='tenedor'>
-                <select onChange={selectCarrera} className='box' defaultValue={'--Elije una Carrera--'}>
+                <div className='lupa'>
+                <FaSearch className='icon-search'/>
+                <select onChange={selectCarrera} className='box'>
                     <option disabled='disabled'>--Elije una Carrera--</option>
                     <option>Ambiental</option>
                     <option>Automotriz</option>
@@ -49,6 +52,8 @@ export const ComboEstudios = () => {
                     <option>Industrial</option>
                     <option>Sistemas</option>
                 </select>
+                </div>
+                
             </div>
             {
                 (carrera.carrera === 'Electronica' && carrera.bool) &&
