@@ -42,7 +42,7 @@ export const ComboEstudios = () => {
             <div className='tenedor'>
                 <div className='lupa'>
                 <FaSearch className='icon-search'/>
-                <select onChange={selectCarrera} className='box'>
+                <select onChange={selectCarrera} className='box' defaultValue={'--Elije una Carrera--'}>
                     <option disabled='disabled'>--Elije una Carrera--</option>
                     <option>Ambiental</option>
                     <option>Automotriz</option>
