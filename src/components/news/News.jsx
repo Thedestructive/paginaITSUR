@@ -1,4 +1,4 @@
-import React, { createRef, useState } from 'react'
+import React, { createRef, useEffect, useState } from 'react'
 import imgNoticia from './img_Noticia.jpg'
 import imgNoticia2 from './img_Noticia2.png'
 import imgNoticia3 from './img_Noticia3.png'
@@ -10,7 +10,7 @@ export const News = () => {
     const refImage = createRef();
     const refText = createRef();
     const [link, setLink] = useState('');
-    let positionUser;
+    const [positionUser, setPositionUser] = useState('');
     const contenent_news = [
         {
             image: imgNoticia,
@@ -38,15 +38,16 @@ export const News = () => {
         refNew.current.style.visibility = 'visible';
         refImage.current.src = img;
         refText.current.innerHTML = text;
-        setLink(link);
-        positionUser = idNew;
+        setPositionUser(idNew);
         window.scroll(0,0);
+        setLink(link);
         await disableScroll();
     }
     const HiddenPopUp = async () => {
         refNew.current.style.visibility = 'hidden';
         document.getElementById(positionUser).scrollIntoView();
-        positionUser = '';
+        setPositionUser('');
+        setLink('');
         await enableScroll();
     }
     const disableScroll = async () => {
@@ -57,6 +58,13 @@ export const News = () => {
     const enableScroll = async () => {
         window.onscroll = null;
     }
+    useEffect(()=>{
+        if(link == ''){
+            enableScroll();
+        }else{
+            disableScroll();
+        }
+    },[link])
     return (
         <section className='noticias'>
             <h1 className='titulo'> Noticias </h1>
