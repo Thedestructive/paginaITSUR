@@ -32,8 +32,8 @@
 }
 
 .menu-icono:hover>#raya1 {
-    top: 50%;
-    left: 50%;
+    top: 60%;
+    left: 40%;
     transform: translate(-50%, -50%);
     rotate: 45deg;
     align-self: center;
@@ -42,7 +42,7 @@
 
 .menu-icono:hover>#raya3 {
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-60%, -50%);
     rotate: -45deg;
     transition: all 0.5s;
 }
@@ -105,5 +105,15 @@
 
     .overlay-menu>p {
         width: 20%;
+    }
+    .menu-icono{
+        background-color: #000;
+        border-radius: 50%;
+        margin: auto;
+        margin: 10px;
+    }
+    .rayas{
+        width: 60%;
+        background-color: #5995f6;
     }
 }
