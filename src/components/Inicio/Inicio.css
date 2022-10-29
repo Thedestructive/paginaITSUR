@@ -5,31 +5,58 @@
     display: flex;
     flex-wrap: wrap;
 }
-
+.imgLogoDiv {
+    width: 100%;
+    height: 100px;
+}
+.imgLogo {
+    height: 100%;
+    width: 100%;
+    content: url('./itsur.png');
+    object-fit: contain;
+}
 .tituloInicio {
     width: 100%;
-    height: fit-content;
+    height: auto;
     color: rgba(0, 0, 0);
     text-align: center;
     background: none;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 3em;
-
+    font-size: 1.2em;
 }
-
-.imgLogoDiv {
-    min-height: 200px;
-    max-height: 400px;
+.contenedor-plataformas{
+    list-style: none;
+    padding: 0;
+    width: 90%;
+}
+.contenedor-plataformas > p {
+    font-size: 1.2em;
+    font-weight: 500;
+    text-align: center;
+    display: block;
+    margin: auto;
+    width: 90%;
+    margin-bottom: 15px;
+}
+.contenedor-plataformas > li {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
     width: 100%;
+    background-color: #1b396a;
+}
+.contenedor-plataformas > li > p{
+    margin: auto;
+    background-color: #1b396a;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 500;
 }
 
-.imgLogo {
-    height: 100%;
-    width: 100%;
-    background-image: url('./itsur.png');
-    background-repeat: no-repeat;
-    background-position: center;
+.icono-plataforma{
+    height: 50px;
 }
+
 
 
 
@@ -42,8 +69,8 @@ footer {
     min-height: 300px;
     max-height: 400px;
     width: 100%;
-    background-image: url('./footer.png');
+    content: url('./footer.png');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    object-fit: contain;
 }
