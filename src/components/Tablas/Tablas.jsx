@@ -1,10 +1,11 @@
 import React from 'react'
 
 
-export const Tablas = ({ fila1, fila2, fila3, fila4, fila5, fila6, fila7, fila8, fila9 }) => {
+export const Tablas = ({ titulo, fila1, fila2, fila3, fila4, fila5, fila6, fila7, fila8, fila9 }) => {
     return (
         <table className="tabla">
             <tbody>
+                <tr><td colSpan={9} align='center' className='titulo-tabla'>{titulo}</td></tr>
                 <tr className="fila-horario-header">
                     <td>Semestre 1</td>
                     <td>Semestre 2</td>
