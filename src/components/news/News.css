@@ -1,6 +1,7 @@
 .noticias{
     width: 100%;
 }
+
 .titulo{
     color: rgba(0,0,0);
     width: 100%;
@@ -8,16 +9,19 @@
     text-align: center;
     background: none;
     font-family: Arial, Helvetica, sans-serif;
-    margin-top: 25px;
     font-size: 3em;
-    margin-bottom: 50px;
+    top: 5%;
 }
 
+.textMuestraNoticia{
+    margin-top: 13%;
+}
 
 .contenedor-noticias{
     width: 90%;
     height: 100%;
     margin: auto;
+    margin-top: 15%;
     border-radius: 16px;
     display: flex;
     flex-wrap: wrap;
@@ -29,21 +33,28 @@
     width: 250px;
     height: 450px;
     word-wrap: break-word;
-    background-color: #fff;
-    border: 1px solid #e0e2eb;
     border-radius: 0.5rem;
     box-shadow: 0 0.275rem 0.75rem -0.0625rem rgb(19 16 34 / 6%), 0 0.125rem 0.4rem -0.0625rem rgb(19 16 34 / 3%);
-    transition: all 0.7s;
     margin-top: 10px;
     position: relative;
-    overflow-y: auto;
 }
 .card:hover{
-    transform: scale(1.02);
+    border: 1px dashed #000000;
+}
+.contenido-card{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    transition: all 0.3s;
+    position: absolute;
+}
+.contenido-card:hover{
     box-shadow: 0 0 8px 0 #1b396a;
+    transform: translate(-10px,-10px);
 }
 
-.card > img {
+.contenido-card > img {
     width: 100%;
     height: 50%;
     object-fit: fill;
@@ -67,7 +78,7 @@
 
 .btn-noticias:hover{
     cursor: pointer;
-    background-color: #254e8f;
+    background-color: #4284ef;
 }
 .popUpNews{
     position: absolute;
@@ -80,6 +91,7 @@
     visibility: hidden;
     border-radius: 16px;
     border: 1px solid #1b396a;
+    word-wrap: break-word;
 }
 .close-popup{
     position: absolute;
@@ -117,16 +129,51 @@
 }
 
 .textoPopUp{
+    display: block;
+    width: 95%;
+    margin: auto;
     margin-top: 15px;
     text-align: center;
-    color: rgb(5, 5, 5);
+    color: rgb(93, 91, 91);
     background-color: #fff4f47a;
 }
 .card > p{
     color: #7e7e7e;
     text-align: center;
 }
-@media (min-width: 500px){
+.contenedor-link{
+    display: block;
+    width: 100%;
+    height: 150px;
+    position: relative;
+}
+.icon-ojo{
+    background-color: #1b396a;
+    color: #fff;
+    position: absolute;
+    top:50%;
+    left: 40%;
+    transform: translate(-50%,70%);
+    z-index: 100;
+}
+.btn-irA{
+    position: absolute;
+    display: block;
+    width: 30%;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-10%);
+    margin-bottom: 15px;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    border:1px solid #000000;
+    background-color: #1b396a;
+    color:#fff;
+    border-radius: 8px;
+    box-shadow: 1px 2px 5px rgb(93, 91, 91);
+}
+@media (min-width: 725px){
     .popUpNews{
         height: 90vh;
         top: 50%;
@@ -136,5 +183,8 @@
     }
     .imagenPopUp{
         object-fit: fill;
+    }
+    .btn-irA{
+        width: 250px;
     }
 }
