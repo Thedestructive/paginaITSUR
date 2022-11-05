@@ -1,6 +1,6 @@
 .nav-menu {
     width: 0%;
-    display: inline-block;
+    height: 100%;
 }
 
 .menu-icono {
@@ -47,47 +47,77 @@
     transition: all 0.5s;
 }
 
+.contenedor-menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    visibility: hidden;
+    overflow: hidden;
+}
+.close-menu-item{
+    display: inline-block;
+    float: right;
+    margin-right: 5px;
+    color: #ff1a0e;
+}
 .overlay-menu {
-    z-index: 1000;
+    z-index: 10;
     width: 0%;
-    height: 100vh;
-    position: absolute;
+    height: 165%;
     background-color: rgba(169, 169, 169, 0.464);
+    position: absolute;
     top: 0;
     visibility: hidden;
     transition: all 0.7s;
 }
 
-.overlay-menu>p {
+.menu {
+    height: 100%;
+    width: 0;
+    top: 0;
+    position: absolute;
+    z-index: 200;
+    transition: all 0.7s;
+}
+
+.menu>p {
     display: block;
-    width: 70%;
+    width: 100%;
     text-align: center;
     font-size: 1.5em;
     color: #1b396a;
     font-weight: 600;
 }
 
-.overlay-menu>ul {
-    width: 70%;
-    height: 100vh;
+.menu>ul {
+    width: 100%;
+    height: 100%;
     padding: 0;
     margin: 0;
     background-color: #ffffff;
 }
 
-.overlay-menu>ul>li {
+.li-list {
     list-style: none;
-    padding: 20px 5px;
     color: #fff;
     cursor: pointer;
 }
 
-.overlay-menu>ul>li:hover {
+.menu>ul>li:hover {
     background-color: #1b396a;
 }
 
-.overlay-menu>ul>li:hover .item-link{
-    background: #1b396a;
+.flecha-subMenu {
+    float: right;
+    background-color: transparent;
+    color: #5995f6;
+    margin-right: 5px;
+}
+
+
+
+.item-link:hover .flecha-subMenu {
+    background: transparent;
     color: #fff;
 }
 
@@ -95,25 +125,80 @@
     text-decoration: none;
     color: #1b396a;
     font-weight: 600;
-    font-size: 1.2em;
+    font-size: 1.1em;
+    display: block;
+    padding: 20px 0px;
+}
+
+.subMenu{
+    display: none;
+    list-style: none;
+    height: 100%;
+    padding: 0;
+    transition: all 1s;
+}
+.item-link-sub{
+    display: block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #1b396a;
+    border-bottom: 1px solid #1b396a;
 }
 
 @media (min-width: 500px) {
-    .overlay-menu>ul {
+    .menu {
         width: 20%;
+        height: 110%;
     }
-
-    .overlay-menu>p {
-        width: 20%;
+    .overlay-menu{
+        height: 110%;
     }
-    .menu-icono{
+    .menu-icono {
         background-color: #000;
         border-radius: 50%;
         margin: auto;
         margin: 10px;
     }
-    .rayas{
+    .menu>ul>li:hover .item-link {
+        background: #1b396a;
+        color: #fff;
+    }
+    .rayas {
         width: 60%;
         background-color: #5995f6;
+    }
+
+    .mas-contenido {
+        height: 110%;
+        width: 0%;
+        top: 0;
+        left: 20%;
+        position: absolute;
+        visibility: hidden;
+        background-color: rgb(255, 255, 255);
+        transition: all 0.2s;
+        z-index: 200;
+        border-left: 1px solid #1b396a;
+    }
+    .subMenu {
+        display: block;
+        width: 100%;
+        padding: 20px 0px;
+        position: absolute;
+        z-index: 1000;
+    }
+    
+    .subMenu>li {
+        display: block;
+        
+    }
+    
+    .subMenu>li>a {
+        color: #1b396a;
+        display: block;
+        padding: 12px 10px;
+    }
+    .subMenu > li:hover{
+        border-bottom: 1px solid #5995f6;
     }
 }

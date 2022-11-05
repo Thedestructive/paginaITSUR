@@ -1,6 +1,7 @@
 import React from 'react'
 import { Tablas } from '../Tablas/Tablas';
 import '../Tablas/Tablas.css';
+import { MenuPlanEstudio } from './MenuPlanEstudio';
 
 export const PlanEstudioSistemas = () => {
     const fila1 = ['Cálculo Diferencial', 'Cálculo Integral', 'Cálculo Vectorial', 'Ecuaciones Diferenciales', 'Métodos Numéricos', 'Simulación', 'Programación Lógica y funcional', 'Inteligencia Artificial', 'Residencia Profesional'];
@@ -11,9 +12,55 @@ export const PlanEstudioSistemas = () => {
     const fila6 = ['Fundamentos de Investigación', 'Probabilidad y Estadística', 'Física General', 'Principios Elec. y Apl. Dig.', 'Arquitectura de Computadoras', 'Lenguajes de Interfaz', 'Actividad Complementaria V', 'Investigación de Operaciones', ' '];
     const fila7 = ['Tutoría I (Actividad Complementaria I)', 'Tutoría II (Actividad Complementaria II)', 'Servicio Social II 70% Créditos (7mo y 8vo)', ' ', ' ', 'Sistemas Programables', 'Programación Móvil I', 'Programación Móvil II', ' '];
     const fila8 = ['Extracurriculares I (Actividad Complementaria III)', 'Extracurriculares II (Actividad Complementaria IV)', 'Ingles I', 'Ingles II', 'Ingles III', 'Ingles IV', 'Ingles V', 'Form. y Eval. de Proy. de Inv.', ' '];
+    const perfilIngreso = [{
+        encabezado: 'El aspirante a la carrera de Ingeniería en Sistemas Computacionales preferentemente debe cumplir los siguientes requisitos:',
+        lista: ['Gusto por la tecnología', 'Habilidad para la solución de problemas (lógica)', 'Habilidad de comunicación oral y escrita', 'Capacidad de aprender por su propia cuenta (investigación)',
+            'Trabajo en equipo', 'Creactividad', 'Habilidades para la solución de problemas matemáticos'],
+    }
+    ];
+    const areaConocimiento = [
+        {
+            title: 'Área básica',
+            lista: ['Matemáticas', 'Física', 'Estadística', 'Computación']
+        },
+        {
+            title: 'Área de especialidad:',
+            lista: ['Programación', 'Redes e Internet', 'Ingeniería de Software', 'Simulación e inteligencia artificial', 'Internet de las cosas',
+                'Programación de aplicaciones web', 'Programación de aplicaciones móviles']
+        },
+        {
+            title: 'Área de desarrollo integral:',
+            lista: ['Formación social y cultural', 'Inglés', 'Desarrollo profesional y humanístico']
+        }
+    ]
+    const mision = ['Formar ingenieros en sistemas computacionales de manera integral comprometidos con el desarrollo sustentable y con su entorno, mediante la aplicación de tecnologías de información y comunicación.'];
+    const vision = ['Ser una carrera que forme Ingenieros en Sistemas Computacionales, reconocido por ofrecer soluciones sustentables de alto nivel tecnológico para los sectores públicos, privados y sociales; comprometidos con su entorno y siempre regidos por la ética profesional.'];
+    const atributosEgreso = ['Identificar, diseñar, configurar y administrar tecnologías de hardware y redes computacionales aplicando las normas y estándares vigentes.', 'Diseñar, desarrollar y administrar software de sistemas o de aplicación, bases de datos y tecnologías de la nube cumpliendo con estándares y normas de calidad; conforme a requerimientos definidos y seguridad de la información participando en proyectos interdisciplinarios.',
+        'Detectar áreas de oportunidad que le permitan emprender y desarrollar proyectos aplicando las tecnologías de la información y comunicación vigentes y emergentes con una visión empresarial.', 'Desempeñar sus actividades profesionales aplicando habilidades humanas y considerando los aspectos legales, éticos, sociales y de desarrollo sustentable.',
+        'Elaborar protocolos de investigación básica y/o aplicada que fortalezcan el desarrollo académico, científico y/o tecnológico en el ámbito de sistemas computacionales y disciplinas afines.', 'Seleccionar y aplicar herramientas matemáticas en el modelado, diseño y desarrollo de tecnología computacional y la extracción de conocimiento para el análisis e interpretación de datos.'];
+    const perfilEgreso = ['Diseñar, configurar y administrar redes computacionales aplicando las normas y estándares vigentes.', 'Desarrollar, implementar y administrar software de sistemas o de aplicación que cumpla con los estándares de calidad con el fin de apoyar la productividad y competitividad de las organizaciones.',
+        'Coordinar y participar en proyectos interdisciplinarios.', 'Diseñar e implementar interfaces hombre‐máquina y máquina‐máquina para la automatización de sistemas.', 'Identificar y comprender las tecnologías de hardware para proponer, desarrollar y mantener aplicaciones eficientes.',
+        'Diseñar, desarrollar y administrar bases de datos conforme a requerimientos definidos, normas organizacionales de manejo y seguridad de la información, utilizando tecnologías emergentes.', 'Integrar soluciones computacionales con diferentes tecnologías, plataformas o dispositivos.',
+        'Desarrollar una visión empresarial para detectar áreas de oportunidad que le permitan emprender y desarrollar proyectos aplicando las tecnologías de la información y comunicación.', 'Desempeñar sus actividades profesionales considerando los aspectos legales, éticos, sociales y de desarrollo sustentable.',
+        'Poseer habilidades metodológicas de investigación que fortalezcan el desarrollo cultural, científico y tecnológico en el ámbito de sistemas computacionales y disciplinas afines.', 'Seleccionar y aplicar herramientas matemáticas para el modelado, diseño y Desarrollo de tecnología computacional.'];
+    const objetivosEducacionales = ['Se desarrolla de una manera eficiente en las áreas de Software, Redes y Hardware, dentro de un marco ético y conciencia social.', 'Optimiza los recursos computacionales disponibles en las organizaciones para resolver problemas.',
+        'Utiliza y adapta las nuevas tecnologías para desarrollar sistemas que apoyan a las áreas funcionales de las organizaciones.', 'Es un profesional proactivo e innovador que diseña, implanta y administra los sistemas mediante las tecnologías computacionales.', 'Se actualiza continuamente en su desarrollo profesional, mediante estudios de especialización.',
+        'Contribuye al desarrollo regional, nacional o internacional, mediante su ejercicio profesional.'];
+    const perfilProfesional = ['Analizar, desarrollar y programar modelos matemáticos, estadísticos y de simulación.', 'Reconocer y guiarse por los aspectos sociales, profesionales y éticos en su entorno.', 'Dirigir y coordinar equipos de trabajo multi e interdisciplinarios.', 'Coordinar y realizar investigaciones que fortalezcan el desarrollo cultural, científico y tecnológico.', 'Aplicar nuevas tecnologías a la solución de problemas de su entorno laboral.', 'Desarrollar y administrar sistemas de información, redes de computadoras y aplicaciones distribuidas.',
+        'Poseer una visión empresarial y detectar áreas de oportunidad para emprender y desarrollar proyectos aplicando las tecnologías de información y las comunicaciones.', 'Seleccionar y administrar los recursos humanos y computacionales para unidades de servicios de cómputo.', 'Estar comprometido con el desarrollo sustentable, respetando el entorno social y cultural donde se desarrollan las organizaciones.',
+        'Desarrollar y administrar software de aplicación y de base.', 'Desarrollar interfaces Hombre-Máquina.', 'Desarrollar e Integrar soluciones de arquitectura básica máquina-máquina.', 'Proporcionar consultoría a usuarios de diferentes niveles en una organización.',
+        'Conocer y aplicar las normas y estándares correspondientes a las tecnologías de información y de las comunicaciones.', 'Identificar riesgos y aplicar esquemas de seguridad en las tecnologías de información y de las comunicaciones.', 'Comprender y aplicar los aspectos legales del uso y explotación de los sistemas computacionales.'];
+    const camposLaborales = ['Industria de desarrollo de software.', 'Empresas de bienes y servicios.', 'Organismos públicos.', 'Empresas propias.', 'Servicios profesionales de asesoría.'];
+    const contacto = ['Ing. Miguel Cruz Pineda', 'Coordinación de Sistemas, Edificio "B" Planta Alta', 'Tel. (445) 457-74-68 al 71 Ext. *107', 'sistemas@itsur.edu.mx'];
+
     return (
-        <Tablas titulo={'Ingeniería en sistemas computacionales con especialidad en programación de aplicaciones web y móviles'}
-            fila1={fila1} fila2={fila2} fila3={fila3} fila4={fila4} fila5={fila5} fila6={fila6} fila7={fila7} fila8={fila8} fila9 />
+        <>
+            <Tablas titulo={'Ingeniería en sistemas computacionales con especialidad en programación de aplicaciones web y móviles'}
+                fila1={fila1} fila2={fila2} fila3={fila3} fila4={fila4} fila5={fila5} fila6={fila6} fila7={fila7} fila8={fila8} fila9 />
+            <MenuPlanEstudio perfilIngreso={perfilIngreso} areaConocimiento={areaConocimiento} mision={mision} vision={vision} atributosEgreso={atributosEgreso}
+                perfilEgreso={perfilEgreso} objetivosEducacionales={objetivosEducacionales} perfilProfesional={perfilProfesional} camposLaborales={camposLaborales}
+                contacto={contacto}/>
+        </>
     )
 
 }
