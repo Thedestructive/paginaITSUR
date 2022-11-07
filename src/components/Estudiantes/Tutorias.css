@@ -7,6 +7,7 @@
 .tutorias > h3, .centroComputo > h3 {
     text-align: center;
     margin-top: 35px;
+    color: #1b396a;
 }
 .titulo-tutorias, .titulo-computo{
     text-align: center;
@@ -29,13 +30,16 @@
     
 }
 
-.seccion-info-tutotias > p, .tutorias-titulo-computo > p{
+.seccion-info-tutotias > p, .tutorias-titulo-computo > p, .seccion-info-computo >  ol{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #1b396a;
     
 }
-.tutorias-titulo-info, .contendor-documentos-tutorias > p{
+.tutorias-titulo-info, .contendor-documentos-tutorias > p, .tutorias-titulo-computo{
     text-align: center;
+    color: #1b396a;
+    font-weight: 700;
+    font-size: 1.1em;
 }
 .tutorias-info, .computo-info{
     padding: 5px;
@@ -54,11 +58,11 @@
     .seccion-info-tutotias, .seccion-info-computo{
         width: 45%;
     }
-    .seccion-info-tutotias::-webkit-scrollbar{
+    .seccion-info-tutotias::-webkit-scrollbar, .seccion-info-computo::-webkit-scrollbar{
         width: 5px;
         background-color: #ffffff;
     }
-    .seccion-info-tutotias::-webkit-scrollbar-thumb{
+    .seccion-info-tutotias::-webkit-scrollbar-thumb, .seccion-info-computo::-webkit-scrollbar-thumb{
         background-color: rgb(157, 156, 156);
         border-radius: 16px;
     }

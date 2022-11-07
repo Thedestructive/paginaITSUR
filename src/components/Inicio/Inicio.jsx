@@ -105,7 +105,7 @@ export const Inicio = () => {
                 </div>
                 <h1 className='tituloInicio'> BIENVENIDO A LA PAGINA DEL ITSUR </h1>
             </div>
-            <p className='titulo-plataforma'>ENCUENTRA LA PLATAFORMA QUE BUSCAS <strong>NO ESTA LA VISTA DE PC SOLO MOVIL</strong></p>
+            <p className='titulo-plataforma'>ENCUENTRA LA PLATAFORMA QUE BUSCAS</p>
             <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
             <ul className='contenedor-plataformas'>
                 {
@@ -119,23 +119,17 @@ export const Inicio = () => {
                             )
                         })
                         :
-                        <div className='contendor-carrusel-plataformas'>
-                            <div className='contenido-carrousel-plataformas'>
-                                <button className='btn-izq' onClick={() => { MoveLeftPhotos() }}>{'<'}</button>
+                        <div className='contendor-cards-plataformas'>
                                 {
                                     plataformas.map((item, idx) => {
                                         return (
-                                            <div className={idx % 2 == 0 ? 'burbuja' : 'cuadro'} key={idx} ref={refIcono}>
-                                                <img alt='na' src={item.img}  />
-                                                <div className='overlay-icono'>
-                                                    <a href={item.link}>{item.texto}</a>
-                                                </div>
+                                            <div className='card-plataforma' key={idx} ref={refIcono}>
+                                                <img alt='na' src={item.img} />
+                                                <a href={item.link}>{item.texto}</a>
                                             </div>
                                         )
                                     })
                                 }
-                                <button className='btn-dere' onClick={() => { MoveRigthPhotos() }}>{'>'}</button>
-                            </div>
                         </div>
                 }
 

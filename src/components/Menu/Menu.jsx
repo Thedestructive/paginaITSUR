@@ -123,13 +123,12 @@ export const Menu = () => {
             //mostramos SUBMENU
             tablaMasContenido.current.style.visibility = 'visible';
             masContenido.current.style.transition = 'all 0.2s';
-            tablaMasContenido.current.style.transition = 'all 1s';
             //le damos el width y lo hacemos visibles
             //para un efecto de derecha a izquierda 
             overlay.current.style.width = "100%";
             overlay.current.style.visibility = "visible";
             overlay.current.style.transition = "all 0.7s";
-
+            await disableScroll();
         } else {
             menu.current.style.width = '100%';
             menu.current.style.visibility = 'visible';
@@ -153,19 +152,18 @@ export const Menu = () => {
         menu.current.style.transition = 'all 0.2s';
         //OCULTAR SUBMENU
         masContenido.current.style.transition = 'all 0s';
+        masContenido.current.style.width = '0%';
+        masContenido.current.style.visibility = 'hidden';
         tablaMasContenido.current.style.visibility = 'hidden';
         tablaMasContenido.current.style.transition = 'all 0s';
-        //Ocultamos la parte del subMenu alado
-        masContenido.current.style.visibility = "hidden";
-        masContenido.current.style.transition = "all 0s";
-        masContenido.current.style.width = "0%";
+        setSubMenu([]);
         //HABILITAR SCROLL
-        //await enableScroll();
+        await enableScroll();
     }
     const DisplaySubMenu = async (idx) => {
         //mostramos la parte del subMenu alado
         masContenido.current.style.visibility = "visible";
-        masContenido.current.style.width = "30%";
+        masContenido.current.style.width = "20%";
         masContenido.current.style.transition = 'all 0.2s';
         let sub = itemMenu.filter(item => item.index == idx);
         setSubMenu(sub);
