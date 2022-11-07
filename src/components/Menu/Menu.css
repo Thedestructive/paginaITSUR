@@ -186,6 +186,7 @@
         padding: 20px 0px;
         position: absolute;
         z-index: 1000;
+        visibility: hidden;
     }
     
     .subMenu>li {

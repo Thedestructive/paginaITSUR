@@ -35,13 +35,16 @@ export const News = () => {
         }
     ]
     const WatchNew = async (img, text, idNew, link) => {
+        window.scrollTo(0,0);
         refNew.current.style.visibility = 'visible';
         refImage.current.src = img;
         refText.current.innerHTML = text;
         setPositionUser(idNew);
-        window.scroll(0,0);
-        setLink(link);
-        await disableScroll();
+        //ALENTAMOS EL SCROLL DISABLE PARA QUE NO CHOQUE CON EL SMOOTH
+        setTimeout(()=>{
+            setLink(link);
+            disableScroll();
+        }, 800)
     }
     const HiddenPopUp = async () => {
         refNew.current.style.visibility = 'hidden';
@@ -88,7 +91,7 @@ export const News = () => {
                                 <div className='contenido-card'>
                                     <img src={new_item.image} />
                                     <p className = "textMuestraNoticia"> {new_item.textMuestra} </p>
-                                    <button className='btn-noticias' onClick={() => { WatchNew(new_item.image, new_item.textPopUp, idx, new_item.link) }}>Ver mas...</button>
+                                    <button className='btn-noticias' onClick={() => { WatchNew(new_item.image, new_item.textPopUp, idx, new_item.link)}}>Ver mas...</button>
                                 </div>
                             </article>
                         )

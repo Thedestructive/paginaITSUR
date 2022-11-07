@@ -6,6 +6,7 @@ export const Menu = () => {
     let overlay = createRef();
     let menu = createRef();
     let masContenido = createRef();
+    let tablaMasContenido = createRef();
     const itemMenu = [
         {
             title: 'Oferta Educativa',
@@ -54,7 +55,7 @@ export const Menu = () => {
             subMenu: [
                 {
                     title: 'Tutorías',
-                    link: ''
+                    link: '/tutorias'
                 },
                 {
                     title: 'Titulación',
@@ -66,7 +67,7 @@ export const Menu = () => {
                 },
                 {
                     title: 'Centro de Cómputo',
-                    link: ''
+                    link: '/centroComputo'
                 }
             ]
         },
@@ -119,11 +120,16 @@ export const Menu = () => {
         if (window.screen.width > 500) {
             menu.current.style.width = '20%';
             menu.current.style.visibility = 'visible';
+            //mostramos SUBMENU
+            tablaMasContenido.current.style.visibility = 'visible';
+            masContenido.current.style.transition = 'all 0.2s';
+            tablaMasContenido.current.style.transition = 'all 1s';
             //le damos el width y lo hacemos visibles
             //para un efecto de derecha a izquierda 
             overlay.current.style.width = "100%";
             overlay.current.style.visibility = "visible";
             overlay.current.style.transition = "all 0.7s";
+
         } else {
             menu.current.style.width = '100%';
             menu.current.style.visibility = 'visible';
@@ -145,6 +151,10 @@ export const Menu = () => {
         menu.current.style.visibility = 'hidden';
         menu.current.style.width = '0%';
         menu.current.style.transition = 'all 0.2s';
+        //OCULTAR SUBMENU
+        masContenido.current.style.transition = 'all 0s';
+        tablaMasContenido.current.style.visibility = 'hidden';
+        tablaMasContenido.current.style.transition = 'all 0s';
         //Ocultamos la parte del subMenu alado
         masContenido.current.style.visibility = "hidden";
         masContenido.current.style.transition = "all 0s";
@@ -229,13 +239,13 @@ export const Menu = () => {
                     </ul>
                 </div>
                 <div className='mas-contenido' ref={masContenido}>
-                    <ul className='subMenu'>
+                    <ul className='subMenu' ref={tablaMasContenido}>
                         {
                             subMenu.length > 0 &&
                             subMenu[0].subMenu.map((item, idx) => {
                                 return (
                                     <li key={idx}>
-                                        <Link className='item-link' to={item.link}>{item.title}</Link>
+                                        <Link className='item-link' to={item.link} onClick={() => { CloseMenu() }}>{item.title}</Link>
                                     </li>
                                 )
                             })

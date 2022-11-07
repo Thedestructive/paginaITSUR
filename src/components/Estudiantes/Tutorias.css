@@ -1,0 +1,66 @@
+.tutorias, .centroComputo{
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: auto;
+}
+.tutorias > h3, .centroComputo > h3 {
+    text-align: center;
+    margin-top: 35px;
+}
+.titulo-tutorias, .titulo-computo{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.seccion-tutorias, .seccion-computo{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+.seccion-info-tutotias, .seccion-info-computo{
+    width: 100%;
+    margin: auto;
+    margin-bottom: 50px;
+    height: 250px;
+    overflow-y: auto;
+    position: relative;
+    border-left: 2px solid #5995f6;
+    
+}
+
+.seccion-info-tutotias > p, .tutorias-titulo-computo > p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1b396a;
+    
+}
+.tutorias-titulo-info, .contendor-documentos-tutorias > p{
+    text-align: center;
+}
+.tutorias-info, .computo-info{
+    padding: 5px;
+    text-align: justify;
+}
+.contendor-documentos-tutorias{
+    width: 100%;
+}
+.contendor-documentos-tutorias > a {
+    display: block;
+    text-decoration: none;
+    color: #5995f6;
+    padding: 5px;
+}
+@media (min-width: 500px) {
+    .seccion-info-tutotias, .seccion-info-computo{
+        width: 45%;
+    }
+    .seccion-info-tutotias::-webkit-scrollbar{
+        width: 5px;
+        background-color: #ffffff;
+    }
+    .seccion-info-tutotias::-webkit-scrollbar-thumb{
+        background-color: rgb(157, 156, 156);
+        border-radius: 16px;
+    }
+}
+
