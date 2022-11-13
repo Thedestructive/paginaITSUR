@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Titulacion } from './components/Estudiantes/Titulacion';
 import { Tutorias } from './components/Estudiantes/Tutorias';
 import { CentroComputo } from './components/Estudiantes/CentroComputo';
+import { SeguroEscolar } from './components/Estudiantes/SeguroEscolar';
 
 window.addEventListener('scroll', function()  {
   let screenSize = window.innerHeight;
@@ -30,6 +31,7 @@ function App() {
             <Route path='/titulacion' element={<Titulacion />} />
             <Route path='/tutorias' element={<Tutorias />} />
             <Route path='/centroComputo' element={<CentroComputo />} />
+            <Route path='/seguroEscolar' element={<SeguroEscolar />} />
           </Routes>
         </section>
       </BrowserRouter>

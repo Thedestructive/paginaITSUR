@@ -81,10 +81,10 @@
     background-color: #4284ef;
 }
 .popUpNews{
-    position: absolute;
+    position: fixed;
     z-index: 10;
     width: 90%;
-    height: auto;
+    min-height: 350px;
     left: 50%;
     top: 55%;
     transform: translate(-50%,-50%);
@@ -122,10 +122,10 @@
 }
 
 .imagenPopUp{
+    border-radius: 16px 16px 0px 0px;
     object-fit: contain;
     width: 100%;
     height: 100%;
-    border-radius: 16px 16px 0px 0px;
 }
 
 .textoPopUp{
@@ -142,10 +142,9 @@
     text-align: center;
 }
 .contenedor-link{
-    display: block;
-    width: 100%;
-    height: 150px;
     position: relative;
+    width: 100%;
+    height: 50px;
 }
 .icon-ojo{
     background-color: #1b396a;

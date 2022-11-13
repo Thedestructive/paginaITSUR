@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './titulacion.css'
+import './EstilosGeneralesEstudiantes.css'
 import { FaEye } from 'react-icons/fa'
 export const Titulacion = () => {
 
@@ -199,12 +200,13 @@ export const Titulacion = () => {
         document.getElementById('popUp').style.opacity = '0'
         document.getElementById(infoPop.index).scrollIntoView();
     }
+
     return (
         <div className='contenedor-titulacion'>
-            <p className='titulacion-titulo'>TITULACIÓN</p>
-            <div className='documento-programa'>
+            <h3>TITULACIÓN</h3>
+            <div className='documento'>
                 <a>Programa de Titulación Integral</a>
-                <FaEye className='icono-titulacion' />
+                <FaEye className='icono-documento' />
             </div>
             <div className='popUp-titulacion' id='popUp'>
                 <p>{infoPop.title} <p className='cerrar-pop-titulacion' onClick={() => { ClosePopUp() }}>X</p></p>
@@ -212,7 +214,7 @@ export const Titulacion = () => {
                     infoPop.info.length > 0 &&
                     infoPop.info.map((item, idx) => {
                         return (
-                            <ol key={idx}>{idx + 1}.- {item}</ol>
+                            <ol key={idx} className="info-titulacion">{idx + 1} {item}</ol>
                         )
                     })
                 }

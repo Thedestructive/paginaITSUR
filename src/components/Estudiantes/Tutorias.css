@@ -1,25 +1,17 @@
-.tutorias, .centroComputo{
-    width: 100%;
-    height: 100%;
-    display: block;
-    margin: auto;
-}
-.tutorias > h3, .centroComputo > h3 {
-    text-align: center;
-    margin-top: 35px;
-    color: #1b396a;
-}
+
 .titulo-tutorias, .titulo-computo{
     text-align: center;
     margin-bottom: 50px;
+    font-weight: 700;
+    margin: 40px;
 }
-.seccion-tutorias, .seccion-computo{
+.seccion-tutorias, .seccion-computo, .seccion-seguro{
     width: 90%;
     display: flex;
     flex-wrap: wrap;
     margin: auto;
 }
-.seccion-info-tutotias, .seccion-info-computo{
+.seccion-info{
     width: 100%;
     margin: auto;
     margin-bottom: 50px;
@@ -30,20 +22,20 @@
     
 }
 
-.seccion-info-tutotias > p, .tutorias-titulo-computo > p, .seccion-info-computo >  ol{
+.titulo-seccion-info{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #1b396a;
-    
 }
-.tutorias-titulo-info, .contendor-documentos-tutorias > p, .tutorias-titulo-computo{
+.titulo-seccion-info, .contendor-documentos-tutorias > p{
     text-align: center;
     color: #1b396a;
     font-weight: 700;
     font-size: 1.1em;
 }
-.tutorias-info, .computo-info{
+.info-seccion-estudiante{
     padding: 5px;
     text-align: justify;
+    color: #1b396a;
 }
 .contendor-documentos-tutorias{
     width: 100%;
@@ -55,14 +47,14 @@
     padding: 5px;
 }
 @media (min-width: 500px) {
-    .seccion-info-tutotias, .seccion-info-computo{
+    .seccion-info{
         width: 45%;
     }
-    .seccion-info-tutotias::-webkit-scrollbar, .seccion-info-computo::-webkit-scrollbar{
+    .seccion-info::-webkit-scrollbar{
         width: 5px;
         background-color: #ffffff;
     }
-    .seccion-info-tutotias::-webkit-scrollbar-thumb, .seccion-info-computo::-webkit-scrollbar-thumb{
+    .seccion-info::-webkit-scrollbar-thumb{
         background-color: rgb(157, 156, 156);
         border-radius: 16px;
     }

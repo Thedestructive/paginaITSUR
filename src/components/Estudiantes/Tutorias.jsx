@@ -65,11 +65,11 @@ export const Tutorias = () => {
                 {
                     infoTutotias.map((item, idx) => {
                         return (
-                            <div className='seccion-info-tutotias'>
-                                <p className='tutorias-titulo-info'>{idx + 1} {item.title}</p>
+                            <div className='seccion-info'>
+                                <p className='titulo-seccion-info'>{idx + 1} {item.title}</p>
                                 {
                                     item.info.map((list, ind) => { return (
-                                        <p className='tutorias-info' key={ind}>{list}</p>
+                                        <p className='info-seccion-estudiante' key={ind}>{list}</p>
                                     )})
                                 }
                                 {

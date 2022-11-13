@@ -24,7 +24,7 @@ export const News = () => {
             new: 1,
             textMuestra: " CONVOCATORIA RED ECOS BECAS STUDY BUENOS AIRES",
             textPopUp: '',
-            link:  "http://www.itsur.edu.mx/documentos_publicados/investigacion/2022/Fact_sheet_StudyBuenosAires_2022.pdf"
+            link: "http://www.itsur.edu.mx/documentos_publicados/investigacion/2022/Fact_sheet_StudyBuenosAires_2022.pdf"
         },
         {
             image: imgNoticia3,
@@ -35,39 +35,20 @@ export const News = () => {
         }
     ]
     const WatchNew = async (img, text, idNew, link) => {
-        window.scrollTo(0,0);
+        window.scrollTo(0, 0);
         refNew.current.style.visibility = 'visible';
         refImage.current.src = img;
         refText.current.innerHTML = text;
         setPositionUser(idNew);
-        //ALENTAMOS EL SCROLL DISABLE PARA QUE NO CHOQUE CON EL SMOOTH
-        setTimeout(()=>{
-            setLink(link);
-            disableScroll();
-        }, 800)
+        setLink(link);
     }
     const HiddenPopUp = async () => {
         refNew.current.style.visibility = 'hidden';
         document.getElementById(positionUser).scrollIntoView();
         setPositionUser('');
         setLink('');
-        await enableScroll();
     }
-    const disableScroll = async () => {
-        window.onscroll = function () {
-            window.scrollTo(0, 0);
-        }
-    }
-    const enableScroll = async () => {
-        window.onscroll = null;
-    }
-    useEffect(()=>{
-        if(link == ''){
-            enableScroll();
-        }else{
-            disableScroll();
-        }
-    },[link])
+    
     return (
         <section className='noticias'>
             <h1 className='titulo'> Noticias </h1>
@@ -78,8 +59,8 @@ export const News = () => {
                 {
                     link !== '' &&
                     <div className='contenedor-link'>
-                        <FaEye className='icon-ojo'/>
-                        <a  href={link} className='btn-irA'> Ver documento</a>
+                        <a href={link} className='btn-irA'> Ver documento</a>
+                        <FaEye className='icon-ojo' />
                     </div>
                 }
             </div>
@@ -87,11 +68,11 @@ export const News = () => {
                 {
                     contenent_news.map((new_item, idx) => {
                         return (
-                            <article className='card' key={idx} id = {idx}>
+                            <article className='card' key={idx} id={idx}>
                                 <div className='contenido-card'>
                                     <img src={new_item.image} />
-                                    <p className = "textMuestraNoticia"> {new_item.textMuestra} </p>
-                                    <button className='btn-noticias' onClick={() => { WatchNew(new_item.image, new_item.textPopUp, idx, new_item.link)}}>Ver mas...</button>
+                                    <p className="textMuestraNoticia"> {new_item.textMuestra} </p>
+                                    <button className='btn-noticias' onClick={() => { WatchNew(new_item.image, new_item.textPopUp, idx, new_item.link) }}>Ver mas...</button>
                                 </div>
                             </article>
                         )

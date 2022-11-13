@@ -1,0 +1,15 @@
+.descripcion-seguro {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    text-align: justify;
+    color: #1b396a;
+}
+.link-seguro{
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    color: #5995f6;
+}

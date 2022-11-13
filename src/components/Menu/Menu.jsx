@@ -68,6 +68,10 @@ export const Menu = () => {
                 {
                     title: 'Centro de Cómputo',
                     link: '/centroComputo'
+                },
+                {
+                    title: 'Seguro Social',
+                    link: '/seguroEscolar'
                 }
             ]
         },

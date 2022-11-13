@@ -1,0 +1,73 @@
+.tutorias, .centroComputo, .contenedor-seguro{
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: auto;
+}
+.tutorias > h3, 
+.centroComputo > h3, 
+.contenedor-seguro > h3, 
+.contenedor-titulacion > h3,
+.seccion-seguro > h3 {
+    display: block;
+    width: 90%;
+    margin: auto;
+    border-radius: 16px;
+    text-align: center;
+    margin-top: 70px;
+    text-align: center;
+    color: #ffff;
+    background-color: #1b396a;
+    padding: 20px;
+}
+
+.documento{
+    width: 50%;
+    height: 55px;
+    display: flex;
+    margin: auto;
+    border: 1px solid #e2e5f1;
+    border-radius: 16px;
+    padding: 10px;
+    box-shadow: 1px -1px 8px 1px rgba(0, 0, 0, 0.526);
+    -webkit-box-shadow: 1px -1px 8px 1px rgba(0, 0, 0, 0.526);
+    -moz-box-shadow: 1px -1px 8px 1px rgba(0, 0, 0, 0.526);
+    transition: all 0.5s;
+    margin-top: 10px;
+}
+
+.documento>a{
+    text-decoration: none;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 700;
+    align-self: center;
+    transition: all 0.5s;
+}
+
+.icono-documento {
+    align-self: center;
+    color: #1b396a;
+    width: 30px;
+    transition: all 0.5s;
+}
+
+.documento:hover,
+.documento:hover>a,
+.documento:hover>.icono-documento{
+    background-color: #1b396a;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.documento:hover>a,
+.documento:hover>.icono-documento {
+    color: #fff;
+}
+
+@media (min-width: 500px) {
+    .documento {
+        margin-top: 50px;
+        width: 20%;
+    }
+}
