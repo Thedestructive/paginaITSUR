@@ -75,44 +75,44 @@ export const MenuPlanEstudio = ({ perfilIngreso, areaConocimiento, mision, visio
             <div ref={showInformation} className='planInformation'>
                 <p className='titulo-plan'>{selected.title} {window.screen.width < 500 && <p onClick={() => { ClosePopUpPlan() }} className='close-popUp-plan'>X</p>}</p>
                 {
-                    selected.index === 0 &&
+                    (selected.index === 0 && perfilIngreso.length > 0) &&
                     <PerfilIngreso perfilIngreso={perfilIngreso} />
                 }
                 {
-                    selected.index === 1 &&
+                    (selected.index === 1 && areaConocimiento.length > 0) &&
                     <AreaConocimiento areaConocimiento={areaConocimiento} />
                 }
                 {
-                    selected.index === 2 &&
+                    (selected.index === 2 && mision.length > 0) &&
                     <Mision mision={mision} />
                 }
                 {
-                    selected.index === 3 &&
+                    (selected.index === 3 && vision.length > 0) &&
                     <Vision vision={vision} />
                 }
                 {
-                    selected.index === 5 &&
+                    (selected.index === 5 && atributosEgreso.length > 0) &&
                     <AtributosEgreso atributosEgreso={atributosEgreso} />
                 }
                 {
-                    selected.index === 6 &&
+                    (selected.index === 6 && perfilEgreso.length > 0) &&
                     <PerfilEgreso perfilEgreso={perfilEgreso} />
                 }
                 {
-                    selected.index === 7 &&
+                    (selected.index === 7 && objetivosEducacionales.length > 0) &&
                     <ObjetivosEducacionales objetivosEducacionales={objetivosEducacionales} />
                 }
                 {
-                    selected.index === 8 &&
+                    (selected.index === 8 && perfilProfesional.length > 0) &&
                     <PerfilProfesional perfilProfesional={perfilProfesional} />
                 }
                 {
-                    selected.index === 9 &&
-                    <CamposLaborales camposLaborales={camposLaborales}/>
+                    (selected.index === 9 && camposLaborales.length > 0) &&
+                    <CamposLaborales camposLaborales={camposLaborales} />
                 }
                 {
-                    selected.index === 10 &&
-                    <Contacto contacto={contacto}/> 
+                    (selected.index === 10 && contacto.length > 0) &&
+                    <Contacto contacto={contacto} />
                 }
             </div>
         </div>
