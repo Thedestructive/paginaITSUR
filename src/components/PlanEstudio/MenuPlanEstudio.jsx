@@ -11,18 +11,19 @@ import { ObjetivosEducacionales } from './ObjetivosEducacionales';
 import { PerfilProfesional } from './PerfilProfesional';
 import { CamposLaborales } from './CamposLaborales';
 import { Contacto } from './Contacto';
-export const MenuPlanEstudio = ({ perfilIngreso, areaConocimiento, mision, vision, atributosEgreso, perfilEgreso, objetivosEducacionales, perfilProfesional, camposLaborales, contacto }) => {
-    const title = ['PERFIL DE INGRESO',
-        'AREA DE CONOCIMIENTOS',
-        'MISION', 'VISION',
-        'RETICULA REMEDIAL',
-        'ATRIBUTOS DE EGRESO',
-        'PERFIL DE EGRESO',
-        'OBJETIVOS EDUCACIONALES',
-        'PERFIL PROFESIONAL',
-        'CAMPOS LABORALES',
-        'CONTACTO',
-        'PAGINAS DE INTERES'];
+export const MenuPlanEstudio = ({ titles, perfilIngreso, areaConocimiento, mision, vision, atributosEgreso, perfilEgreso, objetivosEducacionales, perfilProfesional, camposLaborales, contacto }) => {
+    let mapComponent = new Map();
+    mapComponent.set("PERFIL DE INGRESO", <PerfilIngreso perfilIngreso={perfilIngreso} />)
+    mapComponent.set("PERFIL DE EGRESO", <PerfilEgreso perfilEgreso={perfilEgreso} />)
+    mapComponent.set("AREA DE CONOCIMIENTOS", <AreaConocimiento areaConocimiento={areaConocimiento} />)
+    mapComponent.set("MISION", <Mision mision={mision} />)
+    mapComponent.set("VISION", <Vision vision={vision} />)
+    mapComponent.set("ATRIBUTOS DE EGRESO", <AtributosEgreso atributosEgreso={atributosEgreso} />)
+    mapComponent.set("OBJETIVOS EDUCACIONALES", <ObjetivosEducacionales objetivosEducacionales={objetivosEducacionales} />)
+    mapComponent.set("PERFIL PROFESIONAL", <PerfilProfesional perfilProfesional={perfilProfesional} />)
+    mapComponent.set("CAMPOS LABORALES", <CamposLaborales camposLaborales={camposLaborales} />)
+    mapComponent.set("CONTACTO", <Contacto contacto={contacto} />)
+
     //STATE PARA SABER QUE CLICKEO EL USUARIO 
     const [selected, setSelected] = useState({ title: '', index: -1 });
     //REFERENCIA PARA MOSTRAR LA INFORMACION DE LA OPCION SELECCIONADA
@@ -62,7 +63,7 @@ export const MenuPlanEstudio = ({ perfilIngreso, areaConocimiento, mision, visio
             <div className='menu-plan'>
                 <ul>
                     {
-                        title.map((item, idx) => {
+                        titles.map((item, idx) => {
                             return (
                                 <li key={idx} onClick={() => { selectedOption(item, idx) }} id={idx}>
                                     {item} <FaArrowAltCircleRight className='icon-arrow-right' />
@@ -75,45 +76,10 @@ export const MenuPlanEstudio = ({ perfilIngreso, areaConocimiento, mision, visio
             <div ref={showInformation} className='planInformation'>
                 <p className='titulo-plan'>{selected.title} {window.screen.width < 500 && <p onClick={() => { ClosePopUpPlan() }} className='close-popUp-plan'>X</p>}</p>
                 {
-                    selected.index === 0 &&
-                    <PerfilIngreso perfilIngreso={perfilIngreso} />
+                    selected.index !== -1 &&
+                    mapComponent.get(selected.title)
                 }
-                {
-                    selected.index === 1 &&
-                    <AreaConocimiento areaConocimiento={areaConocimiento} />
-                }
-                {
-                    selected.index === 2 &&
-                    <Mision mision={mision} />
-                }
-                {
-                    selected.index === 3 &&
-                    <Vision vision={vision} />
-                }
-                {
-                    selected.index === 5 &&
-                    <AtributosEgreso atributosEgreso={atributosEgreso} />
-                }
-                {
-                    selected.index === 6 &&
-                    <PerfilEgreso perfilEgreso={perfilEgreso} />
-                }
-                {
-                    selected.index === 7 &&
-                    <ObjetivosEducacionales objetivosEducacionales={objetivosEducacionales} />
-                }
-                {
-                    selected.index === 8 &&
-                    <PerfilProfesional perfilProfesional={perfilProfesional} />
-                }
-                {
-                    selected.index === 9 &&
-                    <CamposLaborales camposLaborales={camposLaborales}/>
-                }
-                {
-                    selected.index === 10 &&
-                    <Contacto contacto={contacto}/> 
-                }
+
             </div>
         </div>
     )
