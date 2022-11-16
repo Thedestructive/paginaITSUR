@@ -52,12 +52,22 @@ export const PlanEstudioSistemas = () => {
         'Conocer y aplicar las normas y estándares correspondientes a las tecnologías de información y de las comunicaciones.', 'Identificar riesgos y aplicar esquemas de seguridad en las tecnologías de información y de las comunicaciones.', 'Comprender y aplicar los aspectos legales del uso y explotación de los sistemas computacionales.'];
     const camposLaborales = ['Industria de desarrollo de software.', 'Empresas de bienes y servicios.', 'Organismos públicos.', 'Empresas propias.', 'Servicios profesionales de asesoría.'];
     const contacto = ['Ing. Miguel Cruz Pineda', 'Coordinación de Sistemas, Edificio "B" Planta Alta', 'Tel. (445) 457-74-68 al 71 Ext. *107', 'sistemas@itsur.edu.mx'];
-
+    const titles = ['PERFIL DE INGRESO',
+        'AREA DE CONOCIMIENTOS',
+        'MISION', 'VISION',
+        'RETICULA REMEDIAL',
+        'ATRIBUTOS DE EGRESO',
+        'PERFIL DE EGRESO',
+        'OBJETIVOS EDUCACIONALES',
+        'PERFIL PROFESIONAL',
+        'CAMPOS LABORALES',
+        'CONTACTO',
+        'PAGINAS DE INTERES'];
     return (
         <>
             <Tablas titulo={'Ingeniería en sistemas computacionales con especialidad en programación de aplicaciones web y móviles'}
                 fila1={fila1} fila2={fila2} fila3={fila3} fila4={fila4} fila5={fila5} fila6={fila6} fila7={fila7} fila8={fila8} fila9 />
-            <MenuPlanEstudio perfilIngreso={perfilIngreso} areaConocimiento={areaConocimiento} mision={mision} vision={vision} atributosEgreso={atributosEgreso}
+            <MenuPlanEstudio titles={titles} perfilIngreso={perfilIngreso} areaConocimiento={areaConocimiento} mision={mision} vision={vision} atributosEgreso={atributosEgreso}
                 perfilEgreso={perfilEgreso} objetivosEducacionales={objetivosEducacionales} perfilProfesional={perfilProfesional} camposLaborales={camposLaborales}
                 contacto={contacto} />
         </>
@@ -78,11 +88,12 @@ export const PlanEstudioGastro = () => {
         'Diseñar estructuras administrativas del ámbito gastronómico acorde a los requisitos, aspectos legales, económicos, financieros y comerciales.', 'Solucionar problemas y tomar decisiones para el óptimo cumplimiento de las actividades gastronómicas.', 'Elaborar planes de negocios y establecer controles de calidad de alimentos y bebidas.', 'Organizar y administrar recursos humanos y técnicos en los establecimientos de Alimentos y Bebidas.', 'Integrar, organizar, planear y administrar su propio negocio.', 'Establecer sistemas de información y control en empresas gastronómicas.', 'Generar estrategias para el logro de los objetivos organizacionales.',
         'Identificar el origen y evolución de la gastronomía mediante el estudio de su desarrollo histórico.', 'Implementar las diferentes normas nacionales e internacionales de seguridad e higiene, operando programas para el manejo higiénico de los alimentos.', 'Diseñar, implementar y evaluar los procedimientos de recepción, almacenaje y elaboración de alimentos y bebidas.', 'Diseñar e implementar cartas y menús.', 'Diferenciar el origen y procedimientos de elaboración de las principales bebidas alcohólicas y no alcohólicas.', 'Propiciar la creación y desarrollo de platillos de vanguardia analizando la composición de los alimentos con diversas técnicas y métodos de preparación de la cocina nutricional.', 'Aplicar los conocimientos de las diferentes cocinas para la elaboración de platillos de autor y fusión.', 'Manejar software especializado en organización y control del área de producción y del área de servicio para una mejor administración en los establecimientos de alimentos y bebidas.',
         'Aplicar los conocimientos técnicos especializados del idioma francés e ingles en el área gastronómica.', 'Desarrollar investigación en torno al fenómeno gastronómico desde el punto de vista, cultural, culinario y administrativo para innovar.'];
+    const titles = ['PERFIL DE INGRESO'];
     return (
         <>
             <Tablas titulo={'Gastronomía'}
                 fila1={fila1} fila2={fila2} fila3={fila3} fila4={fila4} fila5={fila5} fila6={fila6} fila7={fila7} fila8={fila8} fila9 />
-            <MenuPlanEstudio perfilIngreso areaConocimiento mision vision atributosEgreso
+            <MenuPlanEstudio titles={titles} perfilIngreso areaConocimiento mision vision atributosEgreso
                 perfilEgreso={perfilEgreso} objetivosEducacionales perfilProfesional camposLaborales
                 contacto />
         </>
@@ -120,14 +131,20 @@ export const PlanEstudioAmbiental = () => {
         'Nuestros egresados establecen procesos de comunicación efectiva y participan activamente la formación de capital humano a nivel básico y medio superior', 'Nuestros egresados continúan con su formación académica realizando estudios de posgrado'];
     const atributosEgreso = ['Elaborar, implementar y mantener sistemas de gestión ambiental y su evaluación mediante auditorías ambientales públicas y privadas', 'Realizar diagnósticos y evaluaciones de impacto y riesgo ambiental sustentados en procedimientos certificados conforme a los criterios Nacionales e Internacionales', ' Elaborar protocolos de investigación básica y aplicada que contengan estudios de factibilidad económica y técnica de los procesos para la prevención y control ambiental.', 'Conocer y aplicar criterios de ingeniería básica y aplicada para el dimensionamiento, operación, mantenimiento y desarrollo de tecnologías de tratamiento',
         ' Adquirir conocimientos de ciencia básica y aplicarlos en el desarrollo de nuevas tecnologías ambientales y TIC´s, así como sistemas computacionales o software especializados en el área ambiental', 'Ser promotor del desarrollo sustentable mediante instrumentos de concientización, sensibilización y comunicación de la importancia del entorno para la vida y el respeto de la misma', 'Tener una actitud emprendedora y de liderazgo para interactuar con grupos multidisciplinarios e interdisciplinarios en la búsqueda de soluciones a los problemas del deterioro del medio ambiente'];
+    const titles = [
+        'ATRIBUTOS DE EGRESO',
+        'PERFIL DE EGRESO',
+        'OBJETIVOS EDUCACIONALES',
+        'CAMPOS LABORALES',
+        'CONTACTO'];
     return (
         <>
-        <Tablas titulo={'Ingeniería Ambiental'}
-            fila1={fila1} fila2={fila2} fila3={fila3} fila4={fila4} fila5={fila5} fila6={fila6} fila7={fila7} fila8={fila8} fila9 />
-            <MenuPlanEstudio perfilIngreso areaConocimiento mision vision atributosEgreso={atributosEgreso}
-                perfilEgreso={perfilEgreso} objetivosEducacionales={objetivosEducacionales} perfilProfesional camposLaborales={camposLaborales}
+            <Tablas titulo={'Ingeniería Ambiental'}
+                fila1={fila1} fila2={fila2} fila3={fila3} fila4={fila4} fila5={fila5} fila6={fila6} fila7={fila7} fila8={fila8} fila9 />
+            <MenuPlanEstudio titles={titles} perfilIngreso={[]} areaConocimiento={[]} mision={[]} vision={[]} atributosEgreso={atributosEgreso}
+                perfilEgreso={perfilEgreso} objetivosEducacionales={objetivosEducacionales} perfilProfesional={[]} camposLaborales={camposLaborales}
                 contacto={contacto} />
-            </>
+        </>
     )
 }
 
