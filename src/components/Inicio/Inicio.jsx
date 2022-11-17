@@ -8,6 +8,7 @@ import buzon from './Queja.svg'
 import tarifa from './Tarifas.svg'
 import './Inicio.css'
 import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
+import { Slider } from './slider/Slider'
 export const Inicio = () => {
     let refIcono = createRef();
     const [cont, setCont] = useState(0);
@@ -91,29 +92,29 @@ export const Inicio = () => {
     return (
         <div className='inicio'>
             <div className='imgLogoDiv'>
-                <img className="imgLogo" />
+                <img className="imgLogo" alt='itsur'/>
                 <div className='contenedor-redes'>
                     <a href='http://www.fb.com'>
                         <FaFacebook className='icono-redes facebook' />
                     </a>
-                    <a>
+                    <a href='#'>
                         <FaTwitter className='icono-redes twitter' />
                     </a>
-                    <a>
+                    <a href='#'>
                         <FaInstagram className='icono-redes instagram' />
                     </a>
                 </div>
                 <h1 className='tituloInicio'> BIENVENIDO A LA PAGINA DEL ITSUR </h1>
             </div>
+            <Slider/>
             <p className='titulo-plataforma'>ENCUENTRA LA PLATAFORMA QUE BUSCAS</p>
-            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
             <ul className='contenedor-plataformas'>
                 {
                     window.screen.width < 500 ?
                         plataformas.map((item, idx) => {
                             return (
                                 <li key={idx}>
-                                    <img src={item.img} className="icono-plataforma" />
+                                    <img src={item.img} className="icono-plataforma" alt='img'/>
                                     <p>{item.texto}</p>
                                 </li>
                             )
