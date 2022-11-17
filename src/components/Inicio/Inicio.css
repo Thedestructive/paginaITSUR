@@ -67,31 +67,30 @@
 }
 
 .tituloInicio {
+    background-color: #1b396a;
+    color: #e2e5f1;
     width: 100%;
-    height: auto;
-    color: rgba(0, 0, 0);
     text-align: center;
-    background: none;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.2em;
 }
 .titulo-plataforma {
+    color: #1b396a;
     display: block;
     font-size: 1.2em;
-    font-weight: 500;
+    font-weight: 700;
     text-align: center;
     width: 100%;
     height: 100px;
     text-align: center;
+    margin-top: 15px
 }
 .contenedor-plataformas {
     display: block;
     list-style: none;
+    width: 100%;
+    margin: 0;
     padding: 0;
-    margin: 00;
-    width: 90%;
-    margin: auto;
-    margin-top: -250px;
     word-break: break-all;
 }
 
@@ -100,7 +99,6 @@
 .contenedor-plataformas>li {
     display: flex;
     align-items: center;
-    margin-left: 15px;
     width: 100%;
     background-color: #1b396a;
 }
@@ -138,124 +136,59 @@ footer {
 @media (min-width:500px) {
     .imgLogo {
         content: url('./header_logo_letras.jpg');
-        width: 90%;
+        width: 100%;
     }
 
     .icono-redes {
         border-radius: 1px;
     }
-
-    .contendor-carrusel-plataformas{
+    .tituloInicio{
+        width: 50%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 12px;
+        height: 50px;
+    }
+    .contendor-cards-plataformas{
         width: 90%;
-        height: 150px;
+        height: auto;
         border: 1px solid #e2e5f1;
         padding: 10px;
         border-radius: 16px;
         margin: auto;
-    }
-    .contenido-carrousel-plataformas{
-        position: relative;
-        width: 100%;
-        height: 100%;
         display: flex;
-        justify-content: space-around;
-        align-items: center;
         flex-wrap: wrap;
-        overflow: hidden;
-        transition: all 0.5s;
-        
+        justify-content: space-around;
     }
-    .cuadro{
+    .card-plataforma{
         width: 20%;
-        height: 100%;
-        background-color: #1b396a;
-        margin-right: 15px;
-        display: flex;
-        justify-content: center;
-        clip-path: polygon(100.00% 50.00%,50.00% 100.00%,0.00% 50.00%,50.00% 0.00%);
-        animation: redes 5s ease-in-out infinite;
+        height: auto;
+        border: 1px solid #1b396a;
         margin-bottom: 20px;
-        overflow: hidden;
-    }
-    .burbuja{
-        width: 20%;
-        height: 90%;
-        background-color: hsl(216, 21%, 77%);
-        margin-right: 15px;
-        display: flex;
-        justify-content: center;
         border-radius: 16px;
-        animation: redes 5s ease-in-out infinite;
-        margin-bottom: 20px;
-        overflow: hidden;
     }
-    .cuadro > img{
-        width: 50%;
+    .card-plataforma > img {
+        width: 40%;
         height: 50%;
-        align-self: center;
-        background-color: #1b396a;
-        transition: all 1s;
-    }
-    .burbuja > img{
-        width: 50%;
-        height: 50%;
-        align-self: center;
-        background-color: hsl(216, 21%, 77%);
-        transition: all 1s;
-    }
-    .btn-izq{
-        border: none;
-        background-color: #E4405F;
-        border-radius: 50%;
-        font-size: 1.1em;
-        font-weight: 600;
-        position: absolute;
-        top: 50%;
-        left: 2%;
-        transform: translate(-50%,-50%);
-        z-index: 10;
-        cursor: pointer;
-    }
-    .btn-dere{
-        border: none;
-        background-color: #E4405F;
-        border-radius: 50%;
-        font-size: 1.1em;
-        font-weight: 600;
-        position: absolute;
-        right: 0%;
-        top: 50%;
-        transform: translate(-50%,-50%);
-        z-index: 10;
-        cursor: pointer;
-    }
-    .overlay-icono{
-        width: 100%;
-        height: 0%;
-        visibility: hidden;
-        background-color: #e4405e9b;
-        position: absolute;
-        transition: all 0.5s;
-    }
-    .overlay-icono > a {
-        text-decoration: none;
-        position: absolute;
         display: block;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #e4405e29;
-        color: rgb(244, 241, 252);
+        margin: auto;
+        object-fit: contain;
+    }
+    .card-plataforma > a {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        color: rgb(223, 216, 216);
         font-weight: 700;
+        font-size: 1em;
+        background-color: #1b396a;
         cursor: pointer;
-    }
-    .burbuja:hover .overlay-icono{
-        height: 100%;
-        visibility: visible;
-    }
-    .cuadro:hover .overlay-icono{
-        height: 100%;
-        visibility: visible;
+        width: 95%;
+        border-radius: 16px;
+        margin: auto;
+        margin-top: 15px;
     }
     footer {
         width: 100%;

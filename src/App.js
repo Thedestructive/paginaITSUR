@@ -5,7 +5,18 @@ import { Menu } from './components/Menu/Menu';
 import { ComboEstudios } from './components/Combo/Combo';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Titulacion } from './components/Estudiantes/Titulacion';
+import { Tutorias } from './components/Estudiantes/Tutorias';
+import { CentroComputo } from './components/Estudiantes/CentroComputo';
+import { SeguroEscolar } from './components/Estudiantes/SeguroEscolar';
 
+window.addEventListener('scroll', function()  {
+  let screenSize = window.innerHeight;
+  let element = document.getElementById('fab');
+      if(screenSize > element.scrollTop){
+        element.classList.add('fab-scroll-visible')
+      }
+    
+});
 
 function App() {
   return (
@@ -18,9 +29,15 @@ function App() {
             <Route path='/Noticias' element={<News />} />
             <Route path='/ComboEstudios' element={<ComboEstudios />} />
             <Route path='/titulacion' element={<Titulacion />} />
+            <Route path='/tutorias' element={<Tutorias />} />
+            <Route path='/centroComputo' element={<CentroComputo />} />
+            <Route path='/seguroEscolar' element={<SeguroEscolar />} />
           </Routes>
         </section>
       </BrowserRouter>
+      <div className='fab-scroll' id='fab' onClick={()=>{window.scrollTo(0,0)}}>
+        <div className='flecha-arriba'></div>
+      </div>
     </div>
   );
 }

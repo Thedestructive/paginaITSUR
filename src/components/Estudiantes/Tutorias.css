@@ -1,0 +1,62 @@
+
+.titulo-tutorias, .titulo-computo{
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: 700;
+    margin: 40px;
+}
+.seccion-tutorias, .seccion-computo, .seccion-seguro{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+.seccion-info{
+    width: 100%;
+    margin: auto;
+    margin-bottom: 50px;
+    height: 250px;
+    overflow-y: auto;
+    position: relative;
+    border-left: 2px solid #5995f6;
+    
+}
+
+.titulo-seccion-info{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1b396a;
+}
+.titulo-seccion-info, .contendor-documentos-tutorias > p{
+    text-align: center;
+    color: #1b396a;
+    font-weight: 700;
+    font-size: 1.1em;
+}
+.info-seccion-estudiante{
+    padding: 5px;
+    text-align: justify;
+    color: #1b396a;
+}
+.contendor-documentos-tutorias{
+    width: 100%;
+}
+.contendor-documentos-tutorias > a {
+    display: block;
+    text-decoration: none;
+    color: #5995f6;
+    padding: 5px;
+}
+@media (min-width: 500px) {
+    .seccion-info{
+        width: 45%;
+    }
+    .seccion-info::-webkit-scrollbar{
+        width: 5px;
+        background-color: #ffffff;
+    }
+    .seccion-info::-webkit-scrollbar-thumb{
+        background-color: rgb(157, 156, 156);
+        border-radius: 16px;
+    }
+}
+

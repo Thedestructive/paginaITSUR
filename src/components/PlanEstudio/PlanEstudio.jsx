@@ -21,16 +21,16 @@ export const PlanEstudioSistemas = () => {
     const areaConocimiento = [
         {
             title: 'Área básica',
-            lista: ['Matemáticas', 'Física', 'Estadística', 'Computación']
+            lista: ['','Matemáticas', 'Física', 'Estadística', 'Computación']
         },
         {
             title: 'Área de especialidad:',
-            lista: ['Programación', 'Redes e Internet', 'Ingeniería de Software', 'Simulación e inteligencia artificial', 'Internet de las cosas',
+            lista: ['','Programación', 'Redes e Internet', 'Ingeniería de Software', 'Simulación e inteligencia artificial', 'Internet de las cosas',
                 'Programación de aplicaciones web', 'Programación de aplicaciones móviles']
         },
         {
             title: 'Área de desarrollo integral:',
-            lista: ['Formación social y cultural', 'Inglés', 'Desarrollo profesional y humanístico']
+            lista: ['','Formación social y cultural', 'Inglés', 'Desarrollo profesional y humanístico']
         }
     ]
     const mision = ['Formar ingenieros en sistemas computacionales de manera integral comprometidos con el desarrollo sustentable y con su entorno, mediante la aplicación de tecnologías de información y comunicación.'];
@@ -88,14 +88,14 @@ export const PlanEstudioGastro = () => {
         'Diseñar estructuras administrativas del ámbito gastronómico acorde a los requisitos, aspectos legales, económicos, financieros y comerciales.', 'Solucionar problemas y tomar decisiones para el óptimo cumplimiento de las actividades gastronómicas.', 'Elaborar planes de negocios y establecer controles de calidad de alimentos y bebidas.', 'Organizar y administrar recursos humanos y técnicos en los establecimientos de Alimentos y Bebidas.', 'Integrar, organizar, planear y administrar su propio negocio.', 'Establecer sistemas de información y control en empresas gastronómicas.', 'Generar estrategias para el logro de los objetivos organizacionales.',
         'Identificar el origen y evolución de la gastronomía mediante el estudio de su desarrollo histórico.', 'Implementar las diferentes normas nacionales e internacionales de seguridad e higiene, operando programas para el manejo higiénico de los alimentos.', 'Diseñar, implementar y evaluar los procedimientos de recepción, almacenaje y elaboración de alimentos y bebidas.', 'Diseñar e implementar cartas y menús.', 'Diferenciar el origen y procedimientos de elaboración de las principales bebidas alcohólicas y no alcohólicas.', 'Propiciar la creación y desarrollo de platillos de vanguardia analizando la composición de los alimentos con diversas técnicas y métodos de preparación de la cocina nutricional.', 'Aplicar los conocimientos de las diferentes cocinas para la elaboración de platillos de autor y fusión.', 'Manejar software especializado en organización y control del área de producción y del área de servicio para una mejor administración en los establecimientos de alimentos y bebidas.',
         'Aplicar los conocimientos técnicos especializados del idioma francés e ingles en el área gastronómica.', 'Desarrollar investigación en torno al fenómeno gastronómico desde el punto de vista, cultural, culinario y administrativo para innovar.'];
-    const titles = ['PERFIL DE INGRESO'];
+    const titles = ['PERFIL DE EGRESO'];
     return (
         <>
             <Tablas titulo={'Gastronomía'}
                 fila1={fila1} fila2={fila2} fila3={fila3} fila4={fila4} fila5={fila5} fila6={fila6} fila7={fila7} fila8={fila8} fila9 />
-            <MenuPlanEstudio titles={titles} perfilIngreso areaConocimiento mision vision atributosEgreso
-                perfilEgreso={perfilEgreso} objetivosEducacionales perfilProfesional camposLaborales
-                contacto />
+            <MenuPlanEstudio titles={titles} perfilIngreso={[]} areaConocimiento={[]} mision={[]} vision={[]} atributosEgreso={[]}
+                perfilEgreso={perfilEgreso} objetivosEducacionales={[]} perfilProfesional={[]} camposLaborales={[]}
+                contacto={[]} />
         </>
     )
 }
@@ -107,9 +107,20 @@ export const PlanEstudioAutomotriz = () => {
     const fila4 = ['Programación básica', ' ', 'Electricidad y magnetismo', 'Análisis de circuitos eléctricos', 'Electrónica analógica', 'Electrónica digital', 'Control', 'Elementos automotrices', 'Residencia profesional'];
     const fila5 = ['Fundamentos de dibujo', 'Tecnología y comportamiento de los materiales', 'Termodinámica', 'Mecánica de fluidos', 'Transferencia de calor', 'Motores de combustión interna', 'Gestión de la calidad automotriz', ' ', 'Servicio social'];
     const fila6 = ['Química aplicada a sistemas automotrices', 'Metrología y normalización', 'Procesos de manufactura de elementos automotrices', 'Habilidades directivas', 'Control estadístico de procesos automotrices', 'Administración de sistemas automotrices', 'Ingeniería de costos automotrices', 'Actividades Complementarias', ' '];
+    const perfilEgreso = ['Analiza y resuelve problemas de las diferentes disciplinas de ingeniería relacionadas con los sistemas automotrices, mediante el desarrollo e implementación de las nuevas tecnologías enfocadas a las necesidades del sector automotriz, de forma responsable y cooperativa.', 'Fomenta el desarrollo sustentable para contribuir al equilibrio ambiental.',
+        'Aplica conocimientos y habilidades generales de ingeniería en las áreas de diseño, manufactura, producción, calidad y conservación de la infraestructura, para fomentar la competitividad del sector automotriz.', 'Desarrolla sistemas automotrices, aplicando los procesos de manufactura desde la planeación y diseño de instalaciones hasta las operaciones.',
+        'Identifica, diagnostica y mide las áreas de oportunidad en los sistemas automotrices, para proponer alternativas de mejora utilizando técnicas y controles estadísticos mediante el trabajo en equipo.', 'Utiliza normas nacionales e internacionales pertinentes, para asegurar la calidad, productividad, seguridad y sustentabilidad del sector automotriz.',
+        'Aplica herramientas computacionales de acuerdo a las tecnologías de vanguardia, para el diseño, simulación, operación y optimización de sistemas automotrices acordes a la demanda del sector industrial.', 'Diseña e integra sistemas de redes industriales para el control, comunicación y automatización de las líneas de producción en la industria automotriz.',
+        'Propone alternativas de mejora continua en los sistemas de producción para optimizar los recursos materiales, humanos y financieros.', 'Aplica la capacidad de dirección, liderazgo y comunicación de relaciones interpersonales, para transmitir ideas, facilitar conocimientos y trabajo en equipo con responsabilidad colectiva para la solución de problemas y desarrollo de proyectos en ingeniería en sistemas automotrices.'];
+    const titles = [
+        'PERFIL DE EGRESO'];
     return (
-        <Tablas titulo={'Ingeniería en Sistemas Automotrices'}
-            fila1={fila1} fila2={fila2} fila3={fila3} fila4={fila4} fila5={fila5} fila6={fila6} fila7 fila8 fila9 />
+        <>
+            <Tablas titulo={'Ingeniería en Sistemas Automotrices'} fila1={fila1} fila2={fila2} fila3={fila3} fila4={fila4} fila5={fila5} fila6={fila6} fila7 fila8 fila9 />
+            <MenuPlanEstudio titles={titles} perfilIngreso={[]} areaConocimiento={[]} mision={[]} vision={[]} atributosEgreso={[]}
+                perfilEgreso={perfilEgreso} objetivosEducacionales={[]} perfilProfesional={[]} camposLaborales={[]}
+                contacto={[]} />
+        </>
     )
 }
 
@@ -173,9 +184,53 @@ export const PlanEstudiElectronica = () => {
     const fila7 = ['Taller de ética', ' ', ' ', ' ', ' ', ' ', 'Taller de investigación I', 'Taller de investigación II', ' '];
     const fila8 = ['Actividad complementaria I', 'Actividad complementaria II', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
     const fila9 = ['Semestre 10: Residencia profesional', 'Actividad complementaria III', 'Actividad complementaria IV', 'Ingles I', 'Ingles II', 'Ingles III', 'Ingles IV', 'Ingles V', 'Servicio social'];
+    const perfilIngreso = [{
+        encabezado: '',
+        lista: ['Capacidad de razonamiento abstracto.','Destreza manual.','Analizar y solucionar problemas reales.','Ser capaz de crear, criticar y trabajar en equipo.','Gusto o inclinación por la electrónica.',
+        'Capacidad y gusto por la información científica y tecnológica.','Superación personal y social.','Interés por la solidaridad social y por lo ecológico para que fundamente su quehacer futuro busque desarrollar productos tecnológicos que no dañen al hombre o  su habitad.'],
+    }
+    ];
+    const areaConocimiento = [
+        {
+            title: 'Área específica:',
+            lista: ['','Automatización de procesos industriales','Sistemas electrónicos con dispositivos programables','Sistemas electrónicos de potencia']
+        },
+        {
+            title: 'Área básica:',
+            lista: ['','Matemáticas','Física']
+        },
+        {
+            title: 'Área de desarrollo integral:',
+            lista: ['','Idioma Inglés','Formación social, cultural y deportiva','Desarrollo profesional y humanístico']
+        }
+    ]
+    const mision=['Contribuir a la formacion integral de ingenieros altamente calificados y competitivos, capaces de integrarse a equipos de trabajo interdisciplinarios y resolver problemas mediante el diseño e implementación de sistemas electrónicos, propiciando con ello el desarrollo de la sociedad.'];
+    const vision=['Ser un programa educativo líder en la región y modelo de referencia para la enseñanza de tecnología en electrónica y automatización, a través de la visión institucional.'];
+    const perfilEgreso=['Con base al desempeño esperado para un Ingeniero en Electrónica, a continuación se presentan los principales rasgos que definen su perfil, de acuerdo con las actividades que desarrolla, así como las actitudes importantes para lograr los propósitos de este profesionista.',
+    'El Ingeniero en Electrónica es el profesionista que no solo responde a las condiciones actuales del mercado de trabajo, sino que actúa como agente que participa y ayuda a la modernización del Sector Productivo.','Diseñar, analizar y construir equipos y/o sistemas electrónicos para la solución de problemas en el entorno profesional, aplicando normas técnicas y estándares nacionales e internacionales.',
+    'Crear, innovar y transferir tecnología aplicando métodos y procedimientos en proyectos de ingeniería electrónica, tomando en cuenta el desarrollo sustentable del entorno.','Promover y participar en programas de mejora continua aplicando normas de calidad en toda empresa.',
+    'Planear, organizar, dirigir y controlar actividades de instalación, actualización, operación y mantenimiento de equipos y/o sistemas electrónicos.','Aplicar las nuevas Tecnologías de la información y de la comunicación, para la adquisición y procesamiento de datos.','Desarrollar y administrar proyectos de investigación y/o desarrollo tecnológico.',
+    'Ejercer la profesión de manera responsable, ética y dentro del marco legal.','Asumir las implicaciones de su desempeño profesional en el entorno político, social, económico y cultural.','Comunicarse con efectividad en forma oral y escrita en el ámbito profesional tanto en su idioma como en un idioma extranjero.','Ejercer actitudes emprendedoras, de liderazgo y desarrollar habilidades para la toma de decisiones en su ámbito profesional.',
+    'Comprometer su formación integral permanente y de actualización profesional continua, de manera autónoma.','Dirigir y participar en equipos de trabajo interdisciplinario y multidisciplinario en contextos nacionales e internacionales.','Capacitar y actualizar en las diversas áreas de aplicación de ingeniería electrónica.',
+    'Simular modelos que permitan predecir el comportamiento de sistemas electrónicos empleando plataformas computacionales.','Seleccionar y operar equipo de medición y prueba.','Utilizar lenguaje de descripción de hardware y programación de microcontroladores en el diseño de sistemas digitales para su aplicación en la resolución de problemas.',
+    'Resolver problemas en el sector productivo mediante la automatización, instrumentación y control.','Desarrollar aplicaciones en un lenguaje de programación de alto nivel para la solución de problemas relacionados con las diferentes disciplinas en el área.','Diseñar e implementar interfaces gráficas de usuario para facilitar la interacción entre el ser humano, los equipos y sistemas electrónicos.'];
+    const camposLaborales=['El egresado de esta profesión, puede desarrollarse básicamente en el sector industrial y de servicios en industrias tales como: metal-mecánica, alimenticia, petroquímica, de la transformación en general, manufactura, maquiladora, con tecnología reciente.','En el sector de servicios puede desempeñarse en el mantenimiento de equipos de computación, asesoría industrial en el área electrónica a nivel diseño, mantenimiento y venta de equipo.',
+    'Puede también establecerse como consultor independiente. Incorporarse como auxiliar técnico (sólo con la carrera), o bien como investigador (después de estudiar un posgrado a fin), en los diferentes centros de investigación existentes en el país.','También podrá desempeñar actividades docentes.'];
+    const contacto=['Dr. Carlos Alberto Fuentes Hernández','Coordinación de Ing. Electrónica, Edificio "B" Planta Alta','Tel. (445) 457-74-68 al 71 Ext. *137','electronica@itsur.edu.mx'];
+    const titles = ['PERFIL DE INGRESO',
+        'AREA DE CONOCIMIENTOS',
+        'MISION', 'VISION',
+        'PERFIL DE EGRESO',
+        'CAMPOS LABORALES',
+        'CONTACTO'];
     return (
-        <Tablas titulo={'Ingeniería electrónica con especialidad en automatización de empresas'}
-            fila1={fila1} fila2={fila2} fila3={fila3} fila4={fila4} fila5={fila5} fila6={fila6} fila7={fila7} fila8={fila8} fila9={fila9} />
+        <>
+            <Tablas titulo={'Ingeniería electrónica con especialidad en automatización de empresas'}
+                fila1={fila1} fila2={fila2} fila3={fila3} fila4={fila4} fila5={fila5} fila6={fila6} fila7={fila7} fila8={fila8} fila9={fila9} />
+            <MenuPlanEstudio titles={titles} perfilIngreso={perfilIngreso} areaConocimiento={areaConocimiento} mision={mision} vision={vision} atributosEgreso={[]}
+                perfilEgreso={perfilEgreso} objetivosEducacionales={[]} perfilProfesional={[]} camposLaborales={camposLaborales}
+                contacto={contacto} />    
+        </>
     )
 }
 
