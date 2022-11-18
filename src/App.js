@@ -10,6 +10,9 @@ import { CentroComputo } from './components/Estudiantes/CentroComputo';
 import { SeguroEscolar } from './components/Estudiantes/SeguroEscolar';
 
 window.addEventListener('scroll', function()  {
+  //hacemos grandote el menu
+  let menu = this.document.getElementById('menu').style;
+  menu.height = '100vh';
   let screenSize = window.innerHeight;
   let element = document.getElementById('fab');
       if(screenSize > element.scrollTop){

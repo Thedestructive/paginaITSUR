@@ -130,6 +130,7 @@ export const Menu = () => {
             //le damos el width y lo hacemos visibles
             //para un efecto de derecha a izquierda 
             overlay.current.style.width = "100%";
+            overlay.current.style.height = "100vh";
             overlay.current.style.visibility = "visible";
             overlay.current.style.transition = "all 0.7s";
             await disableScroll();
@@ -138,9 +139,12 @@ export const Menu = () => {
             menu.current.style.visibility = 'visible';
             menu.current.style.height = '100%';
             menu.current.style.transition = 'all 0.7s';
+            //overlay
+            overlay.current.style.width = "100%";
+            overlay.current.style.height = "400%";
+            overlay.current.style.visibility = "visible";
+            overlay.current.style.transition = "all 0.7s";
         }
-
-
         //bloquear scroll
         //await disableScroll();
     }
@@ -148,6 +152,7 @@ export const Menu = () => {
         //le damos el width y lo hacemos visibles
         //para un efecto de derecha a izquierda 
         overlay.current.style.width = "0%";
+        overlay.current.style.height = "0%";
         overlay.current.style.visibility = "hidden";
         overlay.current.style.transition = "all 0.3s";
         //ocultamos el menu
@@ -187,10 +192,13 @@ export const Menu = () => {
     }
     return (
         <nav className='nav-menu'>
-            <div id='openMenu' className="menu-icono" onClick={() => { OpenMenu() }}>
-                <div className="rayas" id="raya1"></div>
-                <div className="rayas" id="raya2"></div>
-                <div className="rayas" id="raya3"></div>
+            <div id='openMenu' className="contenedor-icono-menu" onClick={() => { OpenMenu() }}>
+                <div className='menu-icono'>
+                    <div className="rayas" id="raya1"></div>
+                    <div className="rayas" id="raya2"></div>
+                    <div className="rayas" id="raya3"></div>
+                </div>
+                <div className='menu-word' onClick={() => { OpenMenu() }}>MENU</div>
             </div>
             <div className='contenedor-menu'>
                 <div className='menu' ref={menu} id='menu'>
@@ -205,7 +213,7 @@ export const Menu = () => {
                                                 (item.subMenu.length > 0) ?
                                                     <p className='item-link' onClick={() => { DisplaySubMenu(idx) }}>{item.title} <FaArrowAltCircleDown className='flecha-subMenu' /></p>
                                                     :
-                                                    <Link to={item.link} className='item-link' onClick={()=>{CloseMenu()}}>{item.title}</Link>
+                                                    <Link to={item.link} className='item-link' onClick={() => { CloseMenu() }}>{item.title}</Link>
                                             }
 
                                         </li>
@@ -223,7 +231,7 @@ export const Menu = () => {
                                                                 item.subMenu.map((sub, index) => {
                                                                     return (
                                                                         <li key={index}>
-                                                                            <Link className='item-link-sub' to={sub.link} onClick={()=>{CloseMenu()}}>{sub.title}</Link>
+                                                                            <Link className='item-link-sub' to={sub.link} onClick={() => { CloseMenu() }}>{sub.title}</Link>
                                                                         </li>
                                                                     )
                                                                 })
@@ -231,7 +239,7 @@ export const Menu = () => {
                                                         </ul>
                                                     </li>
                                                     :
-                                                    <Link to={item.link} className='item-link' onClick={()=>{CloseMenu()}}>{item.title}</Link>
+                                                    <Link to={item.link} className='item-link' onClick={() => { CloseMenu() }}>{item.title}</Link>
                                             }
 
                                         </li>

@@ -26,10 +26,8 @@ export const Slider = () => {
     return (
         <div className='contenedor-slider'>
             <img src={require(`${selectImg}`)} alt='nd' className={loaded ? 'loaded' : 'notLoaded'} onLoad={() => { setLoaded(true) }} />
-            <div className='contenedor-btn-slider'>
-                <button onClick={previus}>{'<'}</button>
-                <button onClick={next}>{'>'}</button>
-            </div>
+                <button onClick={previus} className='btn-izq'>{'<'}</button>
+                <button onClick={next} className='btn-dere'>{'>'}</button>
         </div>
     )
 }

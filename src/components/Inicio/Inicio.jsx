@@ -9,6 +9,7 @@ import tarifa from './Tarifas.svg'
 import './Inicio.css'
 import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
 import { Slider } from './slider/Slider'
+import { News } from '../news/News.jsx';
 export const Inicio = () => {
     let refIcono = createRef();
     const [cont, setCont] = useState(0);
@@ -56,34 +57,7 @@ export const Inicio = () => {
             indice: 6
         }
     ])
-    const MoveRigthPhotos = async () => {
-        for (const element of plataformas) {
-            if (element.indice == plataformas.length) {
-                element.indice = 0;
-            } else {
-                element.indice = element.indice + 1;
-            }
-
-        }
-        await SortPhotos();
-    }
-    const MoveLeftPhotos = async () => {
-        for (const element of plataformas) {
-            if (element.indice == 0) {
-                element.indice = plataformas.length;
-            } else {
-                element.indice = element.indice - 1;
-            }
-        }
-        await SortPhotos();
-    }
-    const SortPhotos = async () => {
-        let aux = plataformas.sort((a, b) => { return a.indice - b.indice });
-        setPlataformas([]);
-        setPlataformas(aux);
-        //variable para reenderizar el componente y que avance el carrusel
-        setCont(cont + 1);
-    }
+    
     useEffect(() => {
         setInterval(() => {
             //return clearInterval();
@@ -107,6 +81,7 @@ export const Inicio = () => {
                 <h1 className='tituloInicio'> BIENVENIDO A LA PAGINA DEL ITSUR </h1>
             </div>
             <Slider/>
+            <News/>
             <p className='titulo-plataforma'>ENCUENTRA LA PLATAFORMA QUE BUSCAS</p>
             <ul className='contenedor-plataformas'>
                 {

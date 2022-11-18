@@ -32,6 +32,27 @@ export const News = () => {
             textMuestra: "CONVOCATORIA PARA EL 2DO. CONGRESO INTERNACIONAL DE INNOVACIÓN EN INGENIERÍA INDUSTRIAL, GESTIÓN Y COMPUTACIÓN (INGECO)",
             textPopUp: '',
             link: "http://www.itsur.edu.mx/documentos_publicados/investigacion/2022/Convocatoria_INGECO.pdf"
+        },
+        {
+            image: imgNoticia3,
+            new: 3,
+            textMuestra: "CONVOCATORIA PARA EL 2DO. CONGRESO INTERNACIONAL DE INNOVACIÓN EN INGENIERÍA INDUSTRIAL, GESTIÓN Y COMPUTACIÓN (INGECO)",
+            textPopUp: '',
+            link: "http://www.itsur.edu.mx/documentos_publicados/investigacion/2022/Convocatoria_INGECO.pdf"
+        },
+        {
+            image: imgNoticia3,
+            new: 4,
+            textMuestra: "CONVOCATORIA PARA EL 2DO. CONGRESO INTERNACIONAL DE INNOVACIÓN EN INGENIERÍA INDUSTRIAL, GESTIÓN Y COMPUTACIÓN (INGECO)",
+            textPopUp: '',
+            link: "http://www.itsur.edu.mx/documentos_publicados/investigacion/2022/Convocatoria_INGECO.pdf"
+        },
+        {
+            image: imgNoticia3,
+            new: 5,
+            textMuestra: "CONVOCATORIA PARA EL 2DO. CONGRESO INTERNACIONAL DE INNOVACIÓN EN INGENIERÍA INDUSTRIAL, GESTIÓN Y COMPUTACIÓN (INGECO)",
+            textPopUp: '',
+            link: "http://www.itsur.edu.mx/documentos_publicados/investigacion/2022/Convocatoria_INGECO.pdf"
         }
     ]
     const WatchNew = async (img, text, idNew, link) => {
