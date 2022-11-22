@@ -169,8 +169,83 @@ export const PlanEstudioIndustrial = () => {
     const fila7 = [' ', ' ', 'Metrología y normalización', ' ', 'Actividad complementaria V', ' ', 'Ingeniería de calidad I', 'Ingeniería de calidad II', ' '];
     const fila8 = ['Extracurriculares I', 'Extracurriculares II', 'Ingles I', 'Ingles II', 'Ingles III', 'Ingles IV', 'Ingles V', 'TOEFL', ' '];
     const fila9 = ['Tutorías I', 'Tutorías II', ' ', ' ', ' ', ' ', 'Servicio social', ' ', ' '];
+   
+    const perfilIngreso = [{
+        encabezado: 'El aspirante a cursar la carrera de ingeniería industrial debe contar con:',
+        lista: ['Capacidad numérica.', 'Capacidad de análisis y observación.', 'Capacidad de adaptabilidad.', 'Coordinación en su expresión verbal y escrita.','Sentido del orden y la organización.', 'Habilidad para relacionarse con los demás.', 'Interés y gusto por los negocios.',
+            'De espíritu creativo e innovador.','Sentido de responsabilidad y compromiso.','Pro activo.'],
+    }];
+
+    const areaConocimiento = [
+        {
+            title: 'Área básica',
+            lista: ['','Matemáticas', 'Física', 'Química', 'Calidad']
+        },
+        {
+            title: 'Área de especialidad:',
+            lista: ['', 'Organización industrial.','Funcionamiento y propiedades de materiales', 'Diseño asistido por computadora y simulación', 'Diseño, planeación y control de la producción', 'Ingeniería económica y financiera']
+        },
+        {
+            title: 'Área de desarrollo integral:',
+            lista: ['','Formación social y cultural', 'Inglés', 'Desarrollo profesional y humanístico']
+        }
+    ];
+    const mision = ['Complementar la formación de alumnos de nivel medio superior y egresar profesionistas competentes en la administración de la producción y calidad de los sectores productivos, comprometidos con su entorno social, ambiental y tecnológico; con personal académico profesional competente en constante actualización.'];
+    const vision = ['Ser la carrera de mayor impacto en el sector productivo y de servicios a nivel nacional, con apoyo de programas y planes de estudio acreditados.'];
+    const atributosEgreso = ['AE1. Conoce la estructura y funcionamiento básico para operar equipos e instrumentos de medición.',
+                            'AE2. Planea y diseña la localización y distribución de instalaciones para la producción de bienes y servicios.',
+                            'AE3. Integra y administra sistemas de higiene, seguridad industrial y protección al medio ambiente.',
+                            'AE4. Utiliza las tecnologías y sistemas de información.',
+                            'AE5. Utiliza técnicas y métodos cualitativos y cuantitativos para la toma de decisiones.',
+                            'AE6. Diseña y realiza experimentos estadísticos, que permitan un adecuado análisis e interpretación de datos, para inferir comportamientos en los sistemas productivos y de servicios.',
+                            'AE7. Coordina y dirige grupos interdisciplinarios en las organizaciones.',
+                            'AE8. Adquiere nuevos conocimientos y habilidades requeridos para mejorar el desempeño de sus tareas.'];
+    const perfilEgreso = ['Diseña, mejora e integra sistemas productivos de bienes y servicios aplicando tecnologías para su optimización.',
+                          'Diseña, implementa y mejora sistemas de trabajo para elevar la productividad.',
+                          'Implanta sistemas de calidad utilizando métodos estadísticos para mejorar la competitividad de las organizaciones.',
+                          'Administra sistemas de mantenimiento en procesos de bienes y servicios para la optimización en el uso de los recursos.',
+                          'Gestiona sistemas de seguridad, salud ocupacional de manera sustentable, en sistemas productivos de bienes y servicios atendiendo los lineamientos legales',
+                          'Formula, evalúa y gestiona proyectos de inversión, sociales y de transferencia de tecnología para el desarrollo regional.'];
+    const objetivosEducacionales = ['OE1. Diseñar, implementar, administrar y mejorar sistemas integrados de: abastecimiento, producción, mantenimiento y estaciones de trabajo; considerando factores ergonómicos, normas nacionales e internacionales y su evaluación de factibilidad operativa y/o económica, en organizaciones productoras de bienes y servicios, mediante la realización de proyectos',
+                                    'OE2. Interpretar e implementar estrategias y métodos estadísticos en los procesos organizacionales, que faciliten la toma de decisiones fundamentadas en planteamientos y modelos analíticos para la mejora continua.',
+                                    'OE3. Estandarizar procesos y operaciones para la mejora de la productividad en las organizaciones.',
+                                    'OE4.Participar de manera eficiente y proactiva en la resolución de problemas y toma de decisiones que favorezcan su entorno laboral con base a su nivel de mando.',
+                                    'OE5. Administrar sistemas de seguridad e higiene industrial, metrología y normalización, además de dar seguimiento a las normas de protección al medio ambiente.'];
+    const perfilProfesional = ['Diseña, implementa, administra y mejora sistemas integrados de abastecimiento, producción y distribución de organizaciones productoras de bienes y servicios, de forma sustentable y considerando las normas nacionales e internacionales.',
+                                'Conoce la estructura y funcionamiento básico para operar la maquinaria, herramientas, equipos e instrumentos de medición y control convencionales y de vanguardia.',
+                                'Participa en proyectos de transferencia, asimilación, desarrollo y adaptación de tecnologías.',
+                                'Integra, dirige y mantiene equipos de trabajo inter y multidisciplinarios en ambientes cambiantes y multiculturales.',
+                                'Diseña, implementa y administra sistemas de mantenimiento.',
+                                'Planea y diseña la localización y distribución de instalaciones para la producción de bienes y servicios.',
+                                'Selecciona, instala y pone en marcha maquinaria y equipo.',
+                                'Diseña, implementa y mejora los sistemas de trabajo aplicando la ergonómia.',
+                                'Integra y administra sistemas de higiene, seguridad industrial y protección al medio ambiente con conciencia e identidad social.',
+                                'Formula, evalúa y administra proyectos de inversión.',
+                                'Desarrolla actitudes emprendedoras, creativas, de superación personal y de liderazgo en su entorno social.',
+                                'Actuá con sentido ético en su entorno laboral y social.',
+                                'Utiliza las tecnologías y sistemas de información de manera eficiente.',
+                                'Utiliza técnicas y métodos cualitativos y cuantitativos para la toma de decisiones.'];
+    const camposLaborales = ['Industria de la transformación.','Empresas de bienes y servicios.', 'Organismos públicos.', 'Empresas propias.', 'Servicios profesionales de asesoría.'];
+    const contacto = ['M.C. Gabriel Magaña Guzmán', 'Coordinación de Ing. Industrial, Edificio "Centro de Cómputo" Planta Baja', 'Tel. (445) 457-74-68 al 71 Ext. *103','industrial@itsur.edu.mx'];
+    const titles = ['PERFIL DE INGRESO',
+        'AREA DE CONOCIMIENTOS',
+        'MISION', 
+        'VISION',
+        'RETICULA REMEDIAL',
+        'ATRIBUTOS DE EGRESO',
+        'PERFIL DE EGRESO',
+        'OBJETIVOS EDUCACIONALES',
+        'PERFIL PROFESIONAL',
+        'CAMPOS LABORALES',
+        'CONTACTO',
+        'PAGINAS DE INTERES'];
     return (
+        <>
         <Tablas titulo={'Ingeniería Industrial con especialidad en Calidad y Productividad'} fila1={fila1} fila2={fila2} fila3={fila3} fila4={fila4} fila5={fila5} fila6={fila6} fila7={fila7} fila8={fila8} fila9={fila9} />
+        <MenuPlanEstudio titles={titles} perfilIngreso={perfilIngreso} areaConocimiento={areaConocimiento} mision={mision} vision={vision} atributosEgreso={atributosEgreso}
+            perfilEgreso={perfilEgreso} objetivosEducacionales={objetivosEducacionales} perfilProfesional={perfilProfesional} camposLaborales={camposLaborales}
+            contacto={contacto} />
+    </>
     )
 }
 
@@ -244,8 +319,86 @@ export const PlanEstudioGestion = () => {
     const fila7 = ['Tutorías', 'Tutorías', 'Ingles I', 'Ingles II', 'Ingles III', 'Ingles IV', 'Cadena de suministros', 'Servicio social', ' '];
     const fila8 = ['Actividades extracurriculares', 'Actividades extracurriculares', ' ', ' ', ' ', ' ', 'Ingles V', 'Actividad complementaria V', ' '];
 
+    const perfilIngreso = [{
+        encabezado: 'El aspirante a cursar la carrera de ingeniería en gestión empresarial debe contar con:',
+        lista: ['Poseer iniciativa y ser emprendedor','Comprometido con la sociedad y su entorno',
+        'Comprensión de lectura, redacción y habilidad verbal','Analizar problemas y proponer soluciones','Conocimientos de computación.'],
+    }];
+
+    const areaConocimiento = [
+        {
+            title: 'Áreas generales',
+            lista: ['',' Mercadotecnia, simulación de negocios, emprendedores y formulación y evaluación de proyectos, plan de negocios.',
+            'Administración, diseño organizacional, capital humano, consultoría.',
+            'Economía, finanzas, contabilidad y comercio internacional.',
+            'Producción, higiene y seguridad industrial, cadena de suministros, calidad, estudio del trabajo, ingeniería aplicada.',
+            'Matemáticas, probabilidad y estadística, investigación de operaciones.',
+            'Ciencias sociales, derecho, ética, investigación, desarrollo sustentable, comunicación.',
+            'Informática y ciencias computacionales.']
+        },
+        { 
+            title: '',
+            lista: []
+        },
+        {
+            title: '',
+            lista: []
+        }
+    ];
+    const mision = ['Contribuir a la formación integral de profesionistas competentes a través del sistema educativo, la investigación científica y tecnológica, la vinculación y la extensión; para la gestión de las empresas e innovación de procesos en un entorno regional, con ética, enfoque global y responsabilidad social.'];
+    const vision = ['Ser identificados a nivel regional como una carrera con egresados reconocidos por su calidad y profesionalismo como preveedores de soluciones para las organizaciones.'];
+    const perfilEgreso = ['Aplica habilidades directivas y de ingeniería en el diseño, gestión, fortalecimiento e innovación de las organizaciones para la toma de decisiones en forma efectiva, con una orientación sistémica y sustentable.',
+                            'Diseña e innova estructuras administrativas y procesos, con base en las necesidades de las organizaciones para competir eficientemente en mercados globales.',
+                            'Gestiona eficientemente los recursos de la organización con visión compartida, con el fin de suministrar bienes y servicios de calidad.',
+                            'Aplica métodos cuantitativos y cualitativos en el análisis e interpretación de datos y modelado de sistemas en los procesos organizacionales, para la mejora continua atendiendo estándares de calidad mundial.',
+                            'Diseña, y emprende nuevos negocios y proyectos empresariales sustentables en mercados competitivos, para promover el desarrollo.',
+                            'Diseña e implementa estrategias de mercadotecnia basadas en información recopilada de fuentes primarias y secundarias, para incrementar la competitividad de las organizaciones.',
+                            'Implementa planes y programas de seguridad e higiene para el fortalecimiento del entorno laboral.',
+                            'Gestiona sistemas integrales de calidad para la mejora de los procesos, ejerciendo un liderazgo estratégico y un compromiso ético.',
+                            'Aplica las normas legales para la creación y desarrollo de las organizaciones.',
+                            'Dirige equipos de trabajo para la mejora continua y el crecimiento integral de las organizaciones.',
+                            'Interpreta la información financiera para detectar oportunidades de mejora e inversión en un mundo global, que propicien la rentabilidad del negocio.',
+                            'Utiliza las nuevas tecnologías de información y comunicación en la organización, para optimizar los procesos y la eficaz toma de decisiones.',
+                            'Promueve el desarrollo del capital humano, para la realización de los objetivos organizacionales, dentro de un marco ético y un contexto multicultural.',
+                            'Aplica métodos de investigación para desarrollar e innovar modelos, sistemas, procesos y productos en las diferentes dimensiones de la organización.',
+                            'Gestiona la cadena de suministro de las organizaciones con un enfoque orientado a procesos para incrementar la productividad.',
+                            'Analiza las variables económicas para facilitar la toma estratégica de decisiones en la organización.',
+                            'Actúa como agente de cambio para facilitar la mejora continua y el desempeño de las organizaciones.',
+                            'Aplica métodos, técnicas y herramientas para la solución de problemas en la gestión empresarial con una visión estratégica.'];
+    const perfilProfesional = ['Desarrollar y aplicar habilidades directivas y la ingeniería en el diseño, creación, gestión, desarrollo, fortalecimiento e innovación de las organizaciones, con una orientación sistémica y sustentable para la toma de decisiones en forma efectiva.',
+                                'Diseñar e innovar estructuras administrativas y procesos, con base en las necesidades de las organizaciones para competir eficientemente en mercados globales.',
+                                'Gestionar eficientemente los recursos de la organización con visión compartida, con el fin de suministrar bienes y servicios de calidad.',
+                                'Aplicar métodos cuantitativos y cualitativos para el análisis e interpretación de datos y modelado de sistemas, en los procesos organizacionales para la mejora continua, atendiendo estándares de calidad mundial.',
+                                'Diseñar, evaluar y emprender nuevos negocios y proyectos empresariales, que promuevan el desarrollo sustentable y la responsabilidad social, en un mercado competitivo.',
+                                'Diseñar e implementar estrategias de mercadotecnia basadas en información recopilada de fuentes primarias y secundarias del consumidor o usuario de algún producto, de acuerdo a oportunidades y amenazas del mercado.',
+                                'Establecer programas para el fortalecimiento de la seguridad e higiene en las organizaciones.',
+                                'Gestionar sistemas integrales de calidad, ejerciendo un liderazgo efectivo y un compromiso ético, aplicando las herramientas básicas de la ingeniería.',
+                                'Interpretar y aplicar normas legales que incidan en la creación y desarrollo de las organizaciones.',
+                                'Integrar, dirigir y desarrollar equipos de trabajo para la mejora continua y el crecimiento integral de las organizaciones.',
+                                'Analizar e interpretar la información financiera para detectar oportunidades de mejora e inversión en un mundo global, que incidan en la rentabilidad del negocio.',
+                                'Utilizar las nuevas tecnologías de información en la organización, para optimizar los procesos de comunicación y eficientar la toma de decisiones.',
+                                'Propiciar el desarrollo del capital humano, para la realización de los objetivos organizacionales, dentro de un marco ético y un contexto multicultural.',
+                                'Aplicar métodos de investigación para desarrollar e innovar sistemas, procesos y productos en las diferentes dimensiones de la organización.',
+                                'Gestionar la cadena de suministros de las organizaciones con un enfoque orientado a procesos.',
+                                'Analizar e interpretar la economía global para facilitar la toma de decisiones en la organización.'];
+    const camposLaborales = ['Pueden crear su propia empresa', 'Como ejecutivos en empresas industriales, comerciales y de servicios, ya sean micro, pequeñas, medianas o grandes.', 'Como consultor empresarial'];
+    const contacto = ['L.C.I. Salvador Santoyo Celedón', 'Coordinación de Ing. Gestión Empresarial, Edificio "A" Planta Alta', 'Tel. (445) 457-74-68 al 71 Ext. *109', 'gempresarial@itsur.edu.mx'];
+    const titles = ['PERFIL DE INGRESO',
+        'AREA DE CONOCIMIENTOS',
+        'MISION', 
+        'VISION',
+        'PERFIL DE EGRESO',
+        'PERFIL PROFESIONAL',
+        'CAMPOS LABORALES',
+        'PID-IGE 2013-2018',
+        'CONTACTO'];
     return (
-        <Tablas titulo={'Ingeniería en gestión empresarial con especialidad en Calidad y Logística'}
-            fila1={fila1} fila2={fila2} fila3={fila3} fila4={fila4} fila5={fila5} fila6={fila6} fila7={fila7} fila8={fila8} fila9 />
+        <>
+            <Tablas titulo={'Ingeniería en gestión empresarial con especialidad en Calidad y Logística'}
+                fila1={fila1} fila2={fila2} fila3={fila3} fila4={fila4} fila5={fila5} fila6={fila6} fila7={fila7} fila8={fila8} fila9 />
+            <MenuPlanEstudio titles={titles} perfilIngreso={perfilIngreso} areaConocimiento={areaConocimiento} mision={mision} vision={vision} atributosEgreso={[]}
+                perfilEgreso={perfilEgreso} objetivosEducacionales={[]} perfilProfesional={perfilProfesional} camposLaborales={camposLaborales}
+                contacto={contacto} />
+        </>
     )
 }
