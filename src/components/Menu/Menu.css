@@ -171,6 +171,7 @@
         width: 35%;
     }
     .menu-word{
+        cursor: pointer;
         text-align: center;
         width: 60%;
         color: rgb(212, 209, 209);
