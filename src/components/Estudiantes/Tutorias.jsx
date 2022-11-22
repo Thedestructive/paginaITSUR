@@ -1,5 +1,5 @@
 import React from 'react'
-import './Tutorias.css'
+import './EstilosColumnasEstudiantes.css'
 export const Tutorias = () => {
     const infoTutotias = [
         {
@@ -69,7 +69,7 @@ export const Tutorias = () => {
                                 <p className='titulo-seccion-info'>{idx + 1} {item.title}</p>
                                 {
                                     item.info.map((list, ind) => { return (
-                                        <p className='info-seccion-estudiante' key={ind}>{list}</p>
+                                        <p className='info-seccion' key={ind}>{list}</p>
                                     )})
                                 }
                                 {

@@ -1,5 +1,5 @@
 import React from 'react'
-import './Tutorias.css'
+import './EstilosColumnasEstudiantes.css'
 export const CentroComputo = () => {
     const objetivos = [
         {
@@ -58,12 +58,12 @@ export const CentroComputo = () => {
                 {
                     objetivos.map((item, idx) => {
                         return (
-                            <div key={idx} className='seccion-info-computo'>
-                                <p className='tutorias-titulo-computo'>{item.title}</p>
+                            <div key={idx} className='seccion-info'>
+                                <p className='titulo-seccion-info'>{item.title}</p>
                                 {
                                     item.list.map((list, index) => {
                                         return (
-                                            <ol key={index} className='computo-info'>{list}</ol>
+                                            <ol key={index} className='info-seccion'>{list}</ol>
                                         )
                                     })
                                 }

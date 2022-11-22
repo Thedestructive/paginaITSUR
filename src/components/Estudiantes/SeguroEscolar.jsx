@@ -85,7 +85,7 @@ export const SeguroEscolar = () => {
                 {
                   item.list.map((list, index) => {
                     return (
-                      <ol key={index} className='info-seccion-estudiante'>{list}</ol>
+                      <ol key={index} className='info-seccion'>{list}</ol>
                     )
                   })
                 }
@@ -106,7 +106,7 @@ export const SeguroEscolar = () => {
                   {
                     item.list.map((list, index) => {
                       return (
-                        <ol key={index} className='info-seccion-estudiante'>{list}</ol>
+                        <ol key={index} className='info-seccion'>{list}</ol>
                       )
                     })
                   }
