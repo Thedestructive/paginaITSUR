@@ -34,7 +34,7 @@
 .menu-icono:hover>#raya1 {
     top: 60%;
     left: 40%;
-    transform: translate(-59%, -80%);
+    transform: translate(-30%, -80%);
     rotate: 45deg;
     align-self: center;
     transition: all 0.5s;
@@ -42,7 +42,7 @@
 
 .menu-icono:hover>#raya3 {
     left: 50%;
-    transform: translate(-75%, -10%);
+    transform: translate(-50%, 80%);
     rotate: -45deg;
     transition: all 0.5s;
 }
@@ -158,10 +158,10 @@
     .contenedor-icono-menu{
         display: flex;
         height: 30px;
-        width: 110px;
+        width: 170px;
     }
     .menu-icono, .menu-word{
-        height: 30px;
+        height: 40px;
         padding: 0;
         margin: 0;
         border: none;

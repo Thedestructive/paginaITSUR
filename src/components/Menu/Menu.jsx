@@ -15,8 +15,8 @@ export const Menu = () => {
             subMenu: []
         },
         {
-            title: 'Noticias',
-            link: '/Noticias',
+            title: 'Inicio',
+            link: '/',
             index: 1,
             subMenu: []
         },
@@ -35,10 +35,6 @@ export const Menu = () => {
             {
                 title: 'Contacto',
                 link: ''
-            },
-            {
-                title: 'Inicio',
-                link: '/'
             }
             ]
         },
