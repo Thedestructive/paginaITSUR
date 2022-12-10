@@ -65,7 +65,7 @@ export const Tutorias = () => {
                 {
                     infoTutotias.map((item, idx) => {
                         return (
-                            <div className='seccion-info'>
+                            <div className='seccion-info scroll-content fadeLeft'>
                                 <p className='titulo-seccion-info'>{idx + 1} {item.title}</p>
                                 {
                                     item.info.map((list, ind) => { return (

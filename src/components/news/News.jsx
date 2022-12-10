@@ -85,11 +85,11 @@ export const News = () => {
                     </div>
                 }
             </div>
-            <div className='contenedor-noticias'>
+            <div className='contenedor-noticias scroll-content fadeLeft'>
                 {
                     contenent_news.map((new_item, idx) => {
                         return (
-                            <article className='card' key={idx} id={idx}>
+                            <article className='card ' key={idx} id={idx}>
                                 <div className='contenido-card'>
                                     <img src={new_item.image} />
                                     <p className="textMuestraNoticia"> {new_item.textMuestra} </p>

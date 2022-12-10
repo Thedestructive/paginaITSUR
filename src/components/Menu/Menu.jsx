@@ -68,6 +68,14 @@ export const Menu = () => {
                 {
                     title: 'Seguro Social',
                     link: '/seguroEscolar'
+                },
+                {
+                    title: 'Apoyos Estudiantiles',
+                    link: '/apoyosEstudiantiles'
+                },
+                {
+                    title: 'Trámites y servicios',
+                    link: '/tramitesServicios'
                 }
             ]
         },
@@ -176,13 +184,20 @@ export const Menu = () => {
     const DisplaySubMenuMovil = async (idx) => {
         setTimeout(() => {
             //obtenemos el subMenu que vamos a desplegar
-            let status = document.getElementById(`subMenuMovil${idx}`).style.display;
-            //dependiendo el status le damos un display
-            if (status == '' || status == 'none') {
-                document.getElementById(`subMenuMovil${idx}`).style.display = 'block';
-                return;
+            let subMenu = document.getElementById(`subMenuMovil${idx}`);
+
+            //recorremos los li de ese subMenu para presentarlos
+            if (subMenu.classList.contains('desplegar')) {
+                subMenu.classList.remove('desplegar');
+                subMenu.removeAttribute("style");
+            } else {
+                subMenu.classList.add('desplegar')
+                
+                //alto del elemento (del submenu)
+                const height = subMenu.scrollHeight;
+                subMenu.style.height = height + "px";
             }
-            document.getElementById(`subMenuMovil${idx}`).style.display = 'none';
+
         }, 100);
 
     }
@@ -207,7 +222,7 @@ export const Menu = () => {
                                         <li key={idx} className='li-list'>
                                             {
                                                 (item.subMenu.length > 0) ?
-                                                    <p className='item-link' onClick={() => { DisplaySubMenu(idx) }}>{item.title} <FaArrowAltCircleDown className='flecha-subMenu' /></p>
+                                                    <div className='item-link' onClick={() => { DisplaySubMenu(idx) }}>{item.title} <FaArrowAltCircleDown className='flecha-subMenu' /></div>
                                                     :
                                                     <Link to={item.link} className='item-link' onClick={() => { CloseMenu() }}>{item.title}</Link>
                                             }

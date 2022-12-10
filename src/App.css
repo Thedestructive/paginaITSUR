@@ -10,6 +10,7 @@ html{
   height: 100%;
   width: 100%;
   display: flex;
+  overflow: hidden;
 }
 
 
@@ -42,4 +43,27 @@ html{
 }
 .fab-scroll-visible {
   visibility: visible;
+}
+
+.fadeTop {
+  visibility: hidden;
+  transform: translate(0, 10vh);
+  transition: all 1s;
+}
+
+.fadeRight {
+  visibility: hidden;
+  transform: translate(10vh, 0vh);
+  transition: all 1s;
+}
+
+.fadeLeft {
+  visibility: hidden;
+  transform: translate(-10vh, 0vh);
+  transition: all 1s;
+}
+
+.visible {
+  visibility: visible;
+  transform: translate(0, 0);
 }

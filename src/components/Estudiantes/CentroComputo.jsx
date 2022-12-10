@@ -4,49 +4,83 @@ export const CentroComputo = () => {
     const objetivos = [
         {
             title: 'Objetivo general',
-            list: ['Brindar a la plantilla estudiantil las herramientas de vanguardia que les permitirán fortalecer su formación académica y enaltecer su futura actividad laboral.']
+            list: [{
+                title: 'Brindar a la plantilla estudiantil las herramientas de vanguardia que les permitirán fortalecer su formación académica y enaltecer su futura actividad laboral.'
+            }]
         },
         {
             title: 'Objetivos específicos',
-            list: ['Mantener los equipos en óptimas condiciones de funcionamiento.',
-                'Prestar servicio oportuno y amable de asesoría en el uso de los equipos.',
-                'Establecer normas y políticas para asegurar la correcta utilización y durabilidad de los equipos de cómputo.',
-                'Incorporar y administrar productos tecnológicos de software, de acuerdo a la estrategia académica de la Institución.',
-                'Detectar y recoger necesidades académicas, definiendo configuraciones de hardware y software adecuadas para satisfacerlas.']
+            list: [
+                {
+                    title: 'Mantener los equipos en óptimas condiciones de funcionamiento.'
+                },
+                {
+                    title: 'Prestar servicio oportuno y amable de asesoría en el uso de los equipos.'
+                },
+                {
+                    title: 'Establecer normas y políticas para asegurar la correcta utilización y durabilidad de los equipos de cómputo.'
+                },
+                {
+                    title: 'Incorporar y administrar productos tecnológicos de software, de acuerdo a la estrategia académica de la Institución.'
+                },
+                {
+                    title: 'Detectar y recoger necesidades académicas, definiendo configuraciones de hardware y software adecuadas para satisfacerlas.'
+                }
+            ]
         },
         {
             title: 'Horario de atención',
-            list: ['El Centro de Cómputo brinda servicio continuo, de lunes a viernes en un horario de 7:00 a 19:00 horas.']
+            list: [{
+                title: 'El Centro de Cómputo brinda servicio continuo, de lunes a viernes en un horario de 7:00 a 19:00 horas.'
+            }
+            ]
         },
         {
             title: 'Servicios del Centro de Cómputo',
-            list: ['Uso de equipo de cómputo con acceso a Internet',
-                'Asesoría en el uso del equipo de cómputo', 'Impresiones', 'Escáner', 'Asignación de cuenta de correo electrónico institucional', 'Credencialización']
+            list: [{
+                title: 'Uso de equipo de cómputo con acceso a Internet'
+            },
+            {
+                title: 'Asesoría en el uso del equipo de cómputo'
+            },
+            {
+                title: 'Impresiones'
+            },
+            {
+                title: 'Escáner'
+            },
+            {
+                title: 'Asignación de cuenta de correo electrónico institucional'
+            },
+            {
+                title: 'Credencialización'
+            }
+            ]
         },
         {
             title: 'Software disponible en el Centro de Cómputo',
             list: [
-                'Microsoft Office 2010',
-                'Microsoft Visio 2010',
-                'Microsoft Project Manager 2007',
-                'Microsoft Visual Studio 2010',
-                'Acrobat Reader X',
-                'Eclipse SDK android',
-                'Netbeans 7.3.1',
-                'StarUML',
-                'Xmind',
-                'Freemind',
-                'PostgreSQL',
-                'MySQL',
-                'S.O. Windows 7']
+                { title: 'Microsoft Office 2010' },
+                { title: 'Microsoft Visio 2010' },
+                { title: 'Microsoft Project Manager 2007' },
+                { title: 'Microsoft Visual Studio 2010' },
+                { title: 'Acrobat Reader X' },
+                { title: 'Eclipse SDK android' },
+                { title: 'Netbeans 7.3.1' },
+                { title: 'StarUML' },
+                { title: 'Xmind' },
+                { title: 'Freemind' },
+                { title: 'PostgreSQL' },
+                { title: 'MySQL' },
+                { title: 'S.O. Windows 7' }]
         },
         {
             title: 'Equipos disponibles en el Centro de Cómputo',
             list: [
-                'Procesador Core 2 duo a 2.66.0 GHz.',
-                'Disco Duro de 160 GB.',
-                'Memoria RAM de 2 GB.',
-                'Monitor LCD de 17 pulgadas.'
+                {title:'Procesador Core 2 duo a 2.66.0 GHz.'},
+                {title:'Disco Duro de 160 GB.'},
+                {title:'Memoria RAM de 2 GB.'},
+                {title:'Monitor LCD de 17 pulgadas.'}
             ]
         }
     ]
@@ -63,7 +97,7 @@ export const CentroComputo = () => {
                                 {
                                     item.list.map((list, index) => {
                                         return (
-                                            <ol key={index} className='info-seccion'>{list}</ol>
+                                            <ol key={index} className='info-seccion'>{list.title}</ol>
                                         )
                                     })
                                 }

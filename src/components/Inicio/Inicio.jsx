@@ -82,8 +82,8 @@ export const Inicio = () => {
             </div>
             <Slider/>
             <News/>
-            <p className='titulo-plataforma'>ENCUENTRA LA PLATAFORMA QUE BUSCAS</p>
-            <ul className='contenedor-plataformas'>
+            <p className='titulo-plataforma scroll-content fadeRight'>ENCUENTRA LA PLATAFORMA QUE BUSCAS</p>
+            <ul className='contenedor-plataformas scroll-content fadeRight'>
                 {
                     window.screen.width < 500 ?
                         plataformas.map((item, idx) => {

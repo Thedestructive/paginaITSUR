@@ -188,6 +188,11 @@ export const Titulacion = () => {
         }
     ]
     const ShowPopTitulacion = async (title, info, index) => {
+        //verificamos si ya lo habia seleccionado antes 
+        let card = document.getElementById(index);
+        if (card.classList.contains('ubicacion-card')) {
+            card.classList.remove('ubicacion-card')
+        }
         setInfoPop({ ...infoPop, title: title, info: info, index: index });
         window.scrollTo(0, 0);
         setTimeout(() => {
@@ -199,6 +204,7 @@ export const Titulacion = () => {
         document.getElementById('popUp').style.visibility = 'hidden'
         document.getElementById('popUp').style.opacity = '0'
         document.getElementById(infoPop.index).scrollIntoView();
+        document.getElementById(infoPop.index).classList.add('ubicacion-card');
     }
 
     return (

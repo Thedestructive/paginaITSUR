@@ -71,7 +71,9 @@
 .area-title{
     font-size: 1.2em;
 }
-
+.area-item{
+    text-align: left;
+}
 .flecha-plan-estudio{
     background-color: #e2e5f105;
     color: #1b396a;
