@@ -200,6 +200,7 @@
         z-index: 200;
         border-left: 1px solid #1b396a;
     }
+    
     .subMenu {
         display: block;
         width: 100%;
@@ -219,6 +220,7 @@
         color: #1b396a;
         display: block;
         padding: 12px 10px;
+        text-decoration: none;
     }
     .subMenu > li:hover{
         border-bottom: 1px solid #5995f6;

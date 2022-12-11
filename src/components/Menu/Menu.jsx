@@ -26,15 +26,21 @@ export const Menu = () => {
             index: 2,
             subMenu: [{
                 title: 'Conócenos',
-                link: ''
+                link: '',
+                subMenu: [
+                    {
+                        title: 'Filosofía',
+                        link: ''
+                    }
+                ]
             },
             {
                 title: 'Directorio',
-                link: ''
+                link: '/directorio'
             },
             {
                 title: 'Contacto',
-                link: ''
+                link: 'https://docs.google.com/forms/d/e/1FAIpQLSeXqOiLKNqWoxfxWJFHLmNOx4mmcFH5K6ikin2f684WWIqIyw/viewform'
             }
             ]
         },
@@ -74,8 +80,20 @@ export const Menu = () => {
                     link: '/apoyosEstudiantiles'
                 },
                 {
+                    title: 'SICEnet',
+                    link: 'https://sicenet.itsur.edu.mx/'
+                },
+                {
+                    title: 'Pagos SITYS',
+                    link: 'http://sitys.surguanajuato.tecnm.mx/'
+                },
+                {
                     title: 'Trámites y servicios',
                     link: '/tramitesServicios'
+                },
+                {
+                    title: 'Convocatorias',
+                    link: '/convocatorias'
                 }
             ]
         },
@@ -114,6 +132,7 @@ export const Menu = () => {
         index: 0,
         subMenu: []
     }]);
+
     const disableScroll = async () => {
         window.onscroll = function () {
             window.scrollTo(0, 0);
@@ -181,6 +200,7 @@ export const Menu = () => {
         let sub = itemMenu.filter(item => item.index == idx);
         setSubMenu(sub);
     }
+
     const DisplaySubMenuMovil = async (idx) => {
         setTimeout(() => {
             //obtenemos el subMenu que vamos a desplegar
@@ -192,7 +212,7 @@ export const Menu = () => {
                 subMenu.removeAttribute("style");
             } else {
                 subMenu.classList.add('desplegar')
-                
+
                 //alto del elemento (del submenu)
                 const height = subMenu.scrollHeight;
                 subMenu.style.height = height + "px";
@@ -242,7 +262,13 @@ export const Menu = () => {
                                                                 item.subMenu.map((sub, index) => {
                                                                     return (
                                                                         <li key={index}>
-                                                                            <Link className='item-link-sub' to={sub.link} onClick={() => { CloseMenu() }}>{sub.title}</Link>
+                                                                            {
+                                                                                sub.link.includes('http')
+                                                                                    ?
+                                                                                    <a href={sub.link} className='item-link-sub'>{sub.title}</a>
+                                                                                    :
+                                                                                    <Link className='item-link-sub' to={sub.link} onClick={() => { CloseMenu() }}>{sub.title}</Link>
+                                                                            }
                                                                         </li>
                                                                     )
                                                                 })
@@ -266,13 +292,20 @@ export const Menu = () => {
                             subMenu[0].subMenu.map((item, idx) => {
                                 return (
                                     <li key={idx}>
-                                        <Link className='item-link' to={item.link} onClick={() => { CloseMenu() }}>{item.title}</Link>
+                                        {
+                                            (item.link.includes('http'))
+                                                ?
+                                                <a href={item.link} target='_blank'>{item.title}</a>
+                                                :
+                                                <Link to={item.link} onClick={() => { CloseMenu() }}>{item.title} {item.title.includes('Conócenos') && <FaArrowAltCircleDown />}</Link>
+                                        }
                                     </li>
                                 )
                             })
                         }
                     </ul>
                 </div>
+
                 <div className='overlay-menu' ref={overlay} onClick={() => { CloseMenu() }}>
                 </div>
             </div>

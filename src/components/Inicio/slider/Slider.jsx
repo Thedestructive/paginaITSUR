@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import './Slider.css'
-export const Slider = () => {
-    const images = ['./AMBIENTAL.jpg', './ConsultaPublica.jpg', './Director_General.jpg', './ELECTRONICA.jpg'];
+
+export const Slider = ({images}) => {
+    
     const [selectIndex, setSelectIndex] = useState(0);
     const [selectImg, setSelectImg] = useState(images[0]);
     const [loaded, setLoaded] = useState(false);
@@ -25,7 +26,8 @@ export const Slider = () => {
     }
     return (
         <div className='contenedor-slider '>
-            <img src={require(`${selectImg}`)} alt='nd' className={loaded ? 'loaded' : 'notLoaded'} onLoad={() => { setLoaded(true) }} />
+            <img src={require(`${selectImg}`)} alt='nd' className={loaded ? 'loaded' : 'notLoaded'} onLoad={() => { setLoaded(true) }}>
+            </img>
             <button onClick={previus} className='btn-izq'>{'<'}</button>
             <button onClick={next} className='btn-dere'>{'>'}</button>
         </div>

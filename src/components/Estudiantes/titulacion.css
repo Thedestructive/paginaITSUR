@@ -110,13 +110,42 @@
     color: rgb(234, 218, 218);
     font-weight: 700;
 }
-.info-titulacion{
-    text-align: left;
+.contenedor-mas-info, .mas-info-titulacion{
+    width: 100%;
     margin: 0;
-    padding: 5px;
+    padding: 0;
+    margin: auto;
+}
+.flecha-info-titulacion{
+    background-color: transparent;
+    color: #dcdde1;
+    float: right;
+    margin-right: 15px;
+    transition: all 1s;
+}
+.rotar{
+    rotate: 180deg;
+}
+.bloque-info-titulacion{
+    height: 35px;
+    width: 100%;
+    list-style: none;
+    text-align: center;
+    background-color: #1b396aed;
+    font-family: sans-serif;
+    color: #cdcdce;
+}
+.info-titulacion{
+    height: 0;
+    overflow: hidden;
+    list-style: none;
+    text-align: left;
+    background-color: #e2e5f1;
+    margin: 0;
     border-radius: 0;
     border-bottom: 1px solid #5995f6;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    transition: all 1s;
 }
 .ubicacion-card{
     animation: currentCard 3s linear;
@@ -148,9 +177,5 @@
         width: 0;
         visibility: hidden;
     }
-    .info-titulacion {
-        width: 95%;
-        margin: auto;
-        padding: 10px;
-    }
+    
 }

@@ -11,8 +11,9 @@ import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
 import { Slider } from './slider/Slider'
 import { News } from '../news/News.jsx';
 export const Inicio = () => {
+    const images = ['./RecursosInicio/AMBIENTAL.jpg', './RecursosInicio/ConsultaPublica.jpg', './RecursosInicio/Director_General.jpg', './RecursosInicio/ELECTRONICA.jpg'];
     let refIcono = createRef();
-    const [cont, setCont] = useState(0);
+    
     const [plataformas, setPlataformas] = useState([
         {
             img: calendario,
@@ -58,11 +59,7 @@ export const Inicio = () => {
         }
     ])
     
-    useEffect(() => {
-        setInterval(() => {
-            //return clearInterval();
-        }, 500)
-    }, [cont])
+    
     return (
         <div className='inicio'>
             <div className='imgLogoDiv'>
@@ -80,7 +77,7 @@ export const Inicio = () => {
                 </div>
                 <h1 className='tituloInicio'> BIENVENIDO A LA PAGINA DEL ITSUR </h1>
             </div>
-            <Slider/>
+            <Slider images={images}/>
             <News/>
             <p className='titulo-plataforma scroll-content fadeRight'>ENCUENTRA LA PLATAFORMA QUE BUSCAS</p>
             <ul className='contenedor-plataformas scroll-content fadeRight'>
@@ -110,7 +107,6 @@ export const Inicio = () => {
                 }
 
             </ul>
-
             <footer>
                 <img className="imgFooter" />
             </footer>

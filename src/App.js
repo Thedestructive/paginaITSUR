@@ -10,6 +10,8 @@ import { CentroComputo } from './components/Estudiantes/CentroComputo';
 import { SeguroEscolar } from './components/Estudiantes/SeguroEscolar';
 import { ApoyosEstudiantiles } from './components/Estudiantes/ApoyosEstudiantiles';
 import { TramitesSerevicios } from './components/Estudiantes/TramitesSerevicios';
+import { Convocatorias } from './components/Estudiantes/Convocatorias';
+import { Directorio } from './components/AcercaITSUR/Directorio';
 
 window.addEventListener('scroll', function () {
   let elements = document.getElementsByClassName('scroll-content');
@@ -48,6 +50,8 @@ function App() {
             <Route path='/seguroEscolar' element={<SeguroEscolar />} />
             <Route path='/apoyosEstudiantiles' element={<ApoyosEstudiantiles />} />
             <Route path='/tramitesServicios' element={<TramitesSerevicios />} />
+            <Route path='/convocatorias' element={<Convocatorias />} />
+            <Route path='/directorio' element={<Directorio />} />
           </Routes>
         </section>
       </BrowserRouter>

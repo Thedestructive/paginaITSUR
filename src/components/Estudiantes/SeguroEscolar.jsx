@@ -80,7 +80,7 @@ export const SeguroEscolar = () => {
         {
           objetivos.map((item, idx) => {
             return (
-              <div key={idx} className='seccion-info'>
+              <div key={idx} className='seccion-info scroll-content fadeTop'>
                 <p className='titulo-seccion-info'>{item.title}</p>
                 {
                   item.list.map((list, index) => {
@@ -101,7 +101,7 @@ export const SeguroEscolar = () => {
           {
             objetivosIncorporacion.map((item, idx) => {
               return (
-                <div key={idx} className='seccion-info'>
+                <div key={idx} className='seccion-info scroll-content fadeLeft'>
                   <p className='titulo-seccion-info'>{item.title}</p>
                   {
                     item.list.map((list, index) => {

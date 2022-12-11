@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './titulacion.css'
 import './EstilosGeneralesEstudiantes.css'
-import { FaEye } from 'react-icons/fa'
+import { FaEye, FaChevronDown } from 'react-icons/fa'
 export const Titulacion = () => {
 
     const [infoPop, setInfoPop] = useState({
@@ -206,7 +206,20 @@ export const Titulacion = () => {
         document.getElementById(infoPop.index).scrollIntoView();
         document.getElementById(infoPop.index).classList.add('ubicacion-card');
     }
-
+    const ShowInfoTitulacion = (idBloque, idIcono) => {
+        let bloque = document.getElementById(idBloque);
+        let icono = document.getElementById(idIcono);
+        if (bloque.classList.contains('desplegar')) {
+            bloque.classList.remove('desplegar');
+            bloque.removeAttribute("style");
+            icono.classList.remove('rotar');
+        } else {
+            const height = bloque.scrollHeight;
+            bloque.style.height = height + "px";
+            bloque.classList.add('desplegar');
+            icono.classList.add('rotar');
+        }
+    }
     return (
         <div className='contenedor-titulacion'>
             <h3>TITULACIÓN</h3>
@@ -216,14 +229,19 @@ export const Titulacion = () => {
             </div>
             <div className='popUp-titulacion' id='popUp'>
                 <p>{infoPop.title} <p className='cerrar-pop-titulacion' onClick={() => { ClosePopUp() }}>X</p></p>
-                {
-                    infoPop.info.length > 0 &&
-                    infoPop.info.map((item, idx) => {
-                        return (
-                            <ol key={idx} className="info-titulacion">{idx + 1} {item}</ol>
-                        )
-                    })
-                }
+                <ul className='contenedor-mas-info'>
+                    {
+                        infoPop.info.length > 0 &&
+                        infoPop.info.map((item, idx) => {
+                            return (
+                                <ul className='mas-info-titulacion'>
+                                    <li key={idx} className='bloque-info-titulacion' onClick={() => { ShowInfoTitulacion(idx + 1 * 100, idx + 10 *100) }}>{idx + 1} <FaChevronDown className='flecha-info-titulacion' id={idx + 10 *100}/></li>
+                                    <li className="info-titulacion" id={idx + 1 * 100}>{item}</li>
+                                </ul>
+                            )
+                        })
+                    }
+                </ul>
             </div>
             <div className='contenedor-plan'>
                 <p className='titulacion-titulo'>PLAN 1993</p>
