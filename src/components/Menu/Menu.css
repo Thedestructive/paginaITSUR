@@ -188,7 +188,7 @@
         background-color: rgb(207, 203, 203);
     }
 
-    .mas-contenido {
+    .mas-contenido, .tercer-menu {
         height: 100%;
         width: 0%;
         top: 0;
@@ -200,7 +200,9 @@
         z-index: 200;
         border-left: 1px solid #1b396a;
     }
-    
+    .tercer-menu {
+        left: 40%;
+    }
     .subMenu {
         display: block;
         width: 100%;

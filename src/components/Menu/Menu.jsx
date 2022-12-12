@@ -7,6 +7,8 @@ export const Menu = () => {
     let menu = createRef();
     let masContenido = createRef();
     let tablaMasContenido = createRef();
+    let tercerMenu = createRef();
+    let tablaTercerMenu = createRef();
     const itemMenu = [
         {
             title: 'Oferta Educativa',
@@ -132,7 +134,12 @@ export const Menu = () => {
         index: 0,
         subMenu: []
     }]);
-
+    const [subMenuTercero, setSubMenuTercero] = useState([{
+        title: '',
+        link: '',
+        index: 0,
+        subMenu: []
+    }]);
     const disableScroll = async () => {
         window.onscroll = function () {
             window.scrollTo(0, 0);
@@ -188,7 +195,14 @@ export const Menu = () => {
         masContenido.current.style.visibility = 'hidden';
         tablaMasContenido.current.style.visibility = 'hidden';
         tablaMasContenido.current.style.transition = 'all 0s';
+        //OCULTAR SUBMENU
+        tercerMenu.current.style.transition = 'all 0s';
+        tercerMenu.current.style.width = '0%';
+        tercerMenu.current.style.visibility = 'hidden';
+        tercerMenu.current.style.visibility = 'hidden';
+        tercerMenu.current.style.transition = 'all 0s';
         setSubMenu([]);
+        setSubMenuTercero([]);
         //HABILITAR SCROLL
         await enableScroll();
     }
@@ -200,7 +214,15 @@ export const Menu = () => {
         let sub = itemMenu.filter(item => item.index == idx);
         setSubMenu(sub);
     }
-
+    const DisplayTercerMenu = async () => {
+        //mostramos la parte del subMenu alado
+        tablaTercerMenu.current.style.visibility = 'visible';
+        tercerMenu.current.style.visibility = "visible";
+        tercerMenu.current.style.width = "20%";
+        tercerMenu.current.style.transition = 'all 0.2s';
+        let subMenuConocenos = subMenu.map((sub, index) => { return sub.subMenu.filter(item => item.title === 'Conócenos') });
+        setSubMenuTercero(subMenuConocenos[0]);
+    }
     const DisplaySubMenuMovil = async (idx) => {
         setTimeout(() => {
             //obtenemos el subMenu que vamos a desplegar
@@ -297,7 +319,7 @@ export const Menu = () => {
                                                 ?
                                                 <a href={item.link} target='_blank'>{item.title}</a>
                                                 :
-                                                <Link to={item.link} onClick={() => { CloseMenu() }}>{item.title} {item.title.includes('Conócenos') && <FaArrowAltCircleDown />}</Link>
+                                                <Link to={item.link} onClick={() => { item.title.includes('Conócenos') ? DisplayTercerMenu() : CloseMenu() }}>{item.title} {item.title.includes('Conócenos') && <FaArrowAltCircleDown />}</Link>
                                         }
                                     </li>
                                 )
@@ -305,7 +327,26 @@ export const Menu = () => {
                         }
                     </ul>
                 </div>
-
+                <div className='tercer-menu' ref={tercerMenu}>
+                    <ul className='subMenu'  ref={tablaTercerMenu}>
+                        {
+                            subMenuTercero.length > 0 &&
+                            subMenuTercero[0].subMenu.map((item, idx) => {
+                                return (
+                                    <li key={idx}>
+                                        {
+                                            (item.link.includes('http'))
+                                                ?
+                                                <a href={item.link} target='_blank'>{item.title}</a>
+                                                :
+                                                <Link to={item.link} onClick={() => {  CloseMenu() }}>{item.title} </Link>
+                                        }
+                                    </li>
+                                )
+                            })
+                        }
+                    </ul>
+                </div>
                 <div className='overlay-menu' ref={overlay} onClick={() => { CloseMenu() }}>
                 </div>
             </div>
