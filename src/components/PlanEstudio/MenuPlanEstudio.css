@@ -31,53 +31,52 @@
 .planInformation {
     position: fixed;
     width: 95%;
-    height: 100%;
+    height: 90vh;
     background-color: #edeff8;
     top: 10px;
     left: 10px;
     border-radius: 16px;
     visibility: hidden;
     opacity: 0;
+    overflow-y: auto;
 }
-
+.titulo-plan, .close-popUp-plan{
+    background-color: #1b396a;
+    color: #fff;
+    border-radius: 16px;
+}
 .titulo-plan {
     text-align: center;
     padding: 10px;
-    background-color: #1b396a;
-    color: #fff;
     font-weight: 700;
-    border-top-right-radius: 16px;
-    border-top-left-radius: 16px;
-    border-bottom-right-radius: 16px;
 }
 .close-popUp-plan{
     display: inline-block;
-    color: #1b396a;
     font-weight: 800;
     font-size: 1.5em;
     position: absolute;
     top: 0;
     right: 10px;
-    background-color: #1b396a;
-    color: #fff;
-    border-top-right-radius: 16px;
 }
 .item-plan {
     background-color: #edeff8;
-    padding: 10px 2px;
+    padding: 10px;
     border-bottom: 1px solid #5995f6;
 }
-.area-title {
+.area-title, .area-item {
     display: block;
     text-align: center;
-    font-size: 1.2em;
     background-color: #edeff8;
 }
-
-.area-item {
-    display: block;
-    padding: 5px;
-    background-color: #edeff8;
+.area-title{
+    font-size: 1.2em;
+}
+.area-item{
+    text-align: left;
+}
+.flecha-plan-estudio{
+    background-color: #e2e5f105;
+    color: #1b396a;
 }
 @media (min-width: 500px) {
     .conteiner-menu-plan {
@@ -102,16 +101,8 @@
         top:0;
         left: 0;
         opacity: 0;
-        border-top-right-radius: 16px;
-        border-bottom-right-radius: 16px;
-        border-top-left-radius: 0px;
+        border-radius: 16px;
         transition: all 1s;
     }
-
-    .item-plan {
-        background-color: #edeff8;
-        padding: 10px 2px;
-    }
-
     
 }

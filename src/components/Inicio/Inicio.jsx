@@ -9,9 +9,11 @@ import tarifa from './Tarifas.svg'
 import './Inicio.css'
 import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
 import { Slider } from './slider/Slider'
+import { News } from '../news/News.jsx';
 export const Inicio = () => {
+    const images = ['./RecursosInicio/AMBIENTAL.jpg', './RecursosInicio/ConsultaPublica.jpg', './RecursosInicio/Director_General.jpg', './RecursosInicio/ELECTRONICA.jpg'];
     let refIcono = createRef();
-    const [cont, setCont] = useState(0);
+    
     const [plataformas, setPlataformas] = useState([
         {
             img: calendario,
@@ -56,39 +58,8 @@ export const Inicio = () => {
             indice: 6
         }
     ])
-    const MoveRigthPhotos = async () => {
-        for (const element of plataformas) {
-            if (element.indice == plataformas.length) {
-                element.indice = 0;
-            } else {
-                element.indice = element.indice + 1;
-            }
-
-        }
-        await SortPhotos();
-    }
-    const MoveLeftPhotos = async () => {
-        for (const element of plataformas) {
-            if (element.indice == 0) {
-                element.indice = plataformas.length;
-            } else {
-                element.indice = element.indice - 1;
-            }
-        }
-        await SortPhotos();
-    }
-    const SortPhotos = async () => {
-        let aux = plataformas.sort((a, b) => { return a.indice - b.indice });
-        setPlataformas([]);
-        setPlataformas(aux);
-        //variable para reenderizar el componente y que avance el carrusel
-        setCont(cont + 1);
-    }
-    useEffect(() => {
-        setInterval(() => {
-            //return clearInterval();
-        }, 500)
-    }, [cont])
+    
+    
     return (
         <div className='inicio'>
             <div className='imgLogoDiv'>
@@ -106,9 +77,10 @@ export const Inicio = () => {
                 </div>
                 <h1 className='tituloInicio'> BIENVENIDO A LA PAGINA DEL ITSUR </h1>
             </div>
-            <Slider/>
-            <p className='titulo-plataforma'>ENCUENTRA LA PLATAFORMA QUE BUSCAS</p>
-            <ul className='contenedor-plataformas'>
+            <Slider images={images}/>
+            <News/>
+            <p className='titulo-plataforma scroll-content fadeRight'>ENCUENTRA LA PLATAFORMA QUE BUSCAS</p>
+            <ul className='contenedor-plataformas scroll-content fadeRight'>
                 {
                     window.screen.width < 500 ?
                         plataformas.map((item, idx) => {
@@ -135,7 +107,6 @@ export const Inicio = () => {
                 }
 
             </ul>
-
             <footer>
                 <img className="imgFooter" />
             </footer>

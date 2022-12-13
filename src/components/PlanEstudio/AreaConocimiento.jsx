@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-
+import { FaArrowRight } from 'react-icons/fa'
 export const AreaConocimiento = ({ areaConocimiento }) => {
     return (
         <div>
@@ -8,7 +8,7 @@ export const AreaConocimiento = ({ areaConocimiento }) => {
                     return (
                         idx === 0
                             ? <ol key={idx} className='area-title'>{areaConocimiento[0].title}</ol>
-                            : <ol key={idx} className='area-item'>{item}</ol>
+                            : <ol key={idx} className='area-item'><FaArrowRight className='flecha-plan-estudio'/> {item}</ol>
                     )
                 })
             }
@@ -17,7 +17,7 @@ export const AreaConocimiento = ({ areaConocimiento }) => {
                     return (
                         idx === 0
                             ? <ol key={idx} className='area-title'>{areaConocimiento[1].title}</ol>
-                            : <ol key={idx} className='area-item'>{item}</ol>
+                            : <ol key={idx} className='area-item'><FaArrowRight className='flecha-plan-estudio'/> {item}</ol>
                     )
                 })
             }
@@ -26,7 +26,7 @@ export const AreaConocimiento = ({ areaConocimiento }) => {
                     return (
                         idx == 0
                             ? <ol key={idx} className='area-title'>{areaConocimiento[2].title}</ol>
-                            : <ol key={idx} className='area-item'>{item}</ol>
+                            : <ol key={idx} className='area-item'><FaArrowRight className='flecha-plan-estudio'/>  {item}</ol>
                     )
                 })
             }
