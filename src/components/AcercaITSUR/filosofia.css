@@ -1,3 +1,16 @@
+.contenedor-filosofia > h3{
+    display: block;
+    width: 90%;
+    margin: auto;
+    border-radius: 16px;
+    text-align: center;
+    margin-top: 70px;
+    text-align: center;
+    color: #ffff;
+    background-color: #1b396a;
+    padding: 20px;
+}
+
 .contendor-imagen-filo {
     margin-top: 20px;
     width: 95%;
