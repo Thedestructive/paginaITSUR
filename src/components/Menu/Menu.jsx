@@ -32,7 +32,7 @@ export const Menu = () => {
                 subMenu: [
                     {
                         title: 'Filosofía',
-                        link: ''
+                        link: '/filosofia'
                     }
                 ]
             },

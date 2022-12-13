@@ -12,6 +12,7 @@ import { ApoyosEstudiantiles } from './components/Estudiantes/ApoyosEstudiantile
 import { TramitesSerevicios } from './components/Estudiantes/TramitesSerevicios';
 import { Convocatorias } from './components/Estudiantes/Convocatorias';
 import { Directorio } from './components/AcercaITSUR/Directorio';
+import { Filosofia } from './components/AcercaITSUR/Filosofia';
 
 window.addEventListener('scroll', function () {
   let elements = document.getElementsByClassName('scroll-content');
@@ -52,6 +53,7 @@ function App() {
             <Route path='/tramitesServicios' element={<TramitesSerevicios />} />
             <Route path='/convocatorias' element={<Convocatorias />} />
             <Route path='/directorio' element={<Directorio />} />
+            <Route path='/filosofia' element={<Filosofia/>}/>
           </Routes>
         </section>
       </BrowserRouter>
